@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. SLIDE 3 — Timeline Interativa
   const timelineNodes = document.querySelectorAll('.timeline-node');
-  const progressLine = document.querySelector('.timeline-progress-line');
   const timelineDetail = document.querySelector('.timeline-detail-card');
   
   // Timeline Data
@@ -74,9 +73,28 @@ document.addEventListener('DOMContentLoaded', () => {
         n.classList.toggle('active', i <= idx);
       });
       
-      // Update progress line
-      const percent = (idx / (timelineNodes.length - 1)) * 100;
-      if (progressLine) progressLine.style.width = `${percent}%`;
+      // Update progress line: align the right edge to the CENTER of the clicked node
+      const timelineInner = document.querySelector('.timeline-inner');
+      const progressLine = document.querySelector('.timeline-progress-line');
+      if (progressLine && timelineInner) {
+        const innerRect = timelineInner.getBoundingClientRect();
+        const nodePoint = node.querySelector('.timeline-node-point');
+        if (idx === timelineNodes.length - 1) {
+          progressLine.style.width = '100%';
+          progressLine.style.background = 'linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary) 80%, var(--color-secondary) 100%)';
+        } else if (nodePoint) {
+          const pointRect = nodePoint.getBoundingClientRect();
+          const centerX = pointRect.left + pointRect.width / 2;
+          const progressWidth = centerX - innerRect.left;
+          progressLine.style.width = progressWidth + 'px';
+          progressLine.style.background = 'var(--color-primary)';
+        } else {
+          // Fallback to percentage calculation
+          const percent = (idx / (timelineNodes.length - 1)) * 100;
+          progressLine.style.width = percent + '%';
+          progressLine.style.background = 'var(--color-primary)';
+        }
+      }
       
       // Show event detail card
       const year = node.getAttribute('data-year');
@@ -91,6 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <p>${data.desc}</p>
         `;
       }
+      // Render Lucide icons inside the detail card
+      if (window.lucide) lucide.createIcons();
     });
   });
 
@@ -110,19 +130,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const modalData = {
     cot: {
-      title: "🧠 Chain-of-Thought (Cadeia de Raciocínio)",
+      title: "Chain-of-Thought (Cadeia de Raciocínio)",
       desc: "Instrui a IA a desmembrar problemas em etapas lógicas sequenciais antes de fornecer o veredito final. Em vez de calcular a resposta instantaneamente, o modelo 'ensaia' no rascunho de texto.<br><br><strong>Impacto prático:</strong> Aumenta drasticamente o acerto em depuração de código, permitindo que o modelo rastreie variáveis e encontre bugs lógicos que seriam ignorados em inferência direta rápida."
     },
     rlhf: {
-      title: "👥 RLHF (Reinforcement Learning from Human Feedback)",
+      title: "RLHF (Reinforcement Learning from Human Feedback)",
       desc: "Técnica de alinhamento onde revisores humanos ranqueiam respostas da IA. O modelo de recompensa treina o gerador principal para preferir clareza, formatação e veracidade.<br><br><strong>Impacto prático:</strong> Reduz drasticamente as respostas rudes, enviesadas ou confusas, gerando saídas de código limpo e formatadas nos padrões exigidos pela indústria."
     },
     distillation: {
-      title: "📦 Destilação de Conhecimento",
+      title: "Destilação de Conhecimento",
       desc: "Processo técnico onde o comportamento de um modelo gigante (ex: 2 trilhões de parâmetros) é transferido para um modelo muito menor (ex: 8-15 bilhões) através do treino nas probabilidades de saída.<br><br><strong>Impacto prático:</strong> Fornece modelos ultra-rápidos e eficientes (como Gemini 3.5 Flash) que rodam com baixíssimo custo, mantendo 90% da inteligência dos gigantes de fronteira."
     },
     synthetic: {
-      title: "🧪 Dados Sintéticos (Synthetic Data)",
+      title: "Dados Sintéticos (Synthetic Data)",
       desc: "Consiste no treinamento de modelos usando conjuntos de dados que foram gerados, filtrados e validados por outras IAs especialistas, resolvendo a escassez de dados reais legíveis na web.<br><br><strong>Impacto prático:</strong> Fornece dados altamente limpos de raciocínio lógico e matemático, ajudando a quebrar os gargalos técnicos que limitavam o aprendizado profundo tradicional."
     }
   };
@@ -138,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <p style="color: var(--text-main); font-size: 1rem; line-height: 1.6;">${data.desc}</p>
         `;
         modalOverlay.classList.add('active');
+        if (window.lucide) lucide.createIcons();
       }
     });
   });
@@ -173,47 +194,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const dictData = {
     "llm": {
-      title: "🧠 Large Language Model (LLM)",
+      title: "Large Language Model (LLM)",
       analogy: "O Cérebro no Frasco.",
       definition: "Modelo matemático baseado na arquitetura Transformer treinado para prever os próximos fragmentos de palavras (tokens). Sozinho, não possui memória persistente, não consegue rodar scripts no terminal nem navegar na internet."
     },
     "harness": {
-      title: "⚙️ Harness (Suporte Agêntico)",
+      title: "Harness (Suporte Agêntico)",
       analogy: "O Corpo e Sistema Nervoso.",
       definition: "A infraestrutura de código que envolve a LLM, provendo loop de execução (Pensar → Agir → Observar), acesso a ferramentas (terminal, editores de arquivo, navegadores) e controles de segurança contra execução de scripts maliciosos."
     },
     "agente": {
-      title: "🤖 Agente de IA",
+      title: "Agente de IA",
       analogy: "O Trabalhador Autônomo.",
       definition: "A união da LLM (raciocínio) com o Harness (ações). O agente recebe um objetivo de alto nível e trabalha de forma cíclica e autônoma, analisando erros, adaptando seus planos e persistindo até atingir a meta."
     },
     "mcp": {
-      title: "🔌 Model Context Protocol (MCP)",
+      title: "Model Context Protocol (MCP)",
       analogy: "O USB-C das Ferramentas.",
       definition: "Protocolo universal e aberto que padroniza a conexão de agentes de IA com servidores de dados externos (Slack, GitHub, Postgres, Jira), evitando integrações complexas e customizadas para cada ferramenta."
     },
     "rag": {
-      title: "🧵 Retrieval-Augmented Generation (RAG)",
+      title: "Retrieval-Augmented Generation (RAG)",
       analogy: "A Consulta Rápida à Biblioteca.",
       definition: "Técnica que busca informações relevantes em base de dados externa e injeta os arquivos no contexto da LLM antes da resposta ser gerada, garantindo respostas atualizadas sobre documentações internas sem custos de re-treinamento."
     },
     "vetorial": {
-      title: "🗄️ Banco Vetorial (Vector DB)",
+      title: "Banco Vetorial (Vector DB)",
       analogy: "A Memória de Longo Prazo Semântica.",
       definition: "Banco de dados especializado que converte textos em vetores matemáticos e os localiza através de similaridade semântica (significado). Crucial para armazenar históricos de chats longos e recuperar contextos via RAG."
     },
     "cot": {
-      title: "🪢 Chain-of-Thought (Cadeia de Pensamento)",
+      title: "Chain-of-Thought (Cadeia de Pensamento)",
       analogy: "O Rascunho de Ideias.",
       definition: "Processo onde a IA explica passo a passo o raciocínio intermediário antes de entregar a resposta final. Melhora consideravelmente a consistência lógica do código gerado."
     },
     "mas": {
-      title: "👥 Multi-Agent System (MAS)",
+      title: "Multi-Agent System (MAS)",
       analogy: "A Equipe de Programação.",
       definition: "Arquitetura de sistemas onde múltiplos agentes especializados (planejador, escritor de código, revisor de segurança, testador) colaboram em paralelo para solucionar problemas complexos, reportando progresso a um orquestrador."
     },
     "hitl": {
-      title: "🛡️ Human-in-the-Loop (HITL)",
+      title: "Human-in-the-Loop (HITL)",
       analogy: "O Supervisor de Segurança.",
       definition: "Padrão de engenharia que insere verificações manuais de aprovação em ações potencialmente críticas tomadas por agentes, tais como commits em repositório master, exclusão de arquivos ou deploys de produção."
     }
@@ -310,9 +331,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 9. SLIDE 13 — Pricing Toggle
   const billingToggle = document.getElementById('billing-toggle');
   const priceValues = {
-    codex: { monthly: ["$20", "$100", "$200"], annual: ["$17", "$85", "$170"] },
-    claude: { monthly: ["$20", "$100", "$200"], annual: ["$17", "$80", "$160"] },
-    antigravity: { monthly: ["$19", "$99", "$199"], annual: ["$15", "$80", "$160"] }
+    codex: { monthly: ["$20", "$100", "$200"], annual: ["$20", "$100", "$200"] },
+    claude: { monthly: ["$20", "$100", "$200"], annual: ["$17", "$100", "$200"] },
+    antigravity: { monthly: ["$19.99", "$79.99", "$199.99"], annual: ["$16.66", "$66.66", "$166.66"] }
   };
 
   if (billingToggle) {

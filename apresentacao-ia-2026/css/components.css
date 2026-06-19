@@ -640,9 +640,13 @@ input:checked + .slider:before {
 /* 11. Custom Checklist (Slide 17) */
 .checklist-container {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: left;
+  /* Allow the checklist to fill available vertical space */
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
 }
 
 .checklist-group {

@@ -10,6 +10,20 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/slides.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style>
+    .icon-wrap { display: inline-flex; align-items: center; justify-content: center; }
+    .agenda-icon-svg { width: 2.5rem; height: 2.5rem; margin-bottom: 12px; }
+    .company-logo-wrap { display: flex; align-items: center; gap: 10px; }
+    .company-logo { height: 32px; width: auto; object-fit: contain; }
+    .company-logo-inline { height: 20px; width: auto; vertical-align: middle; margin-right: 6px; }
+    /* Lucide icon size helpers */
+    .icon-sm { width: 1rem; height: 1rem; }
+    .icon-md { width: 1.5rem; height: 1.5rem; }
+    .icon-lg { width: 2rem; height: 2rem; }
+    .icon-xl { width: 2.5rem; height: 2.5rem; }
+  </style>
 </head>
 <body>
 
@@ -51,7 +65,9 @@
           <span class="badge badge-secondary" style="font-size: 0.85rem; padding: 6px 16px;">Pesquisa · Junho 2026</span>
           <h1 class="typewriter-title" data-text="Inteligência Artificial em 2026">Inteligência Artificial em 2026</h1>
           <h2 class="capa-subtitle">Ferramentas, Agentes e Estratégia para a Equipe</h2>
-          <div class="capa-arrow-pulse" title="Começar Apresentação">↓</div>
+          <div class="capa-arrow-pulse" title="Começar Apresentação">
+            <i data-lucide="chevron-down" style="width:2rem;height:2rem;"></i>
+          </div>
         </div>
       </div>
       
@@ -70,42 +86,42 @@
       <div class="slide-body">
         <div class="grid-agenda">
           <a href="#" class="card agenda-link-card border-top-primary animate-cascade" data-slide-index="2" data-delay="0.0">
-            <span class="agenda-icon">🕰️</span>
+            <span class="agenda-icon"><i data-lucide="clock" class="agenda-icon-svg"></i></span>
             <h3>História da IA</h3>
             <p style="font-size: 0.75rem; margin-top: 8px;">Os principais marcos de 1950 até hoje.</p>
           </a>
           <a href="#" class="card agenda-link-card border-top-primary animate-cascade" data-slide-index="3" data-delay="0.1">
-            <span class="agenda-icon">🧠</span>
+            <span class="agenda-icon"><i data-lucide="cpu" class="agenda-icon-svg"></i></span>
             <h3>O que é uma LLM</h3>
             <p style="font-size: 0.75rem; margin-top: 8px;">O cérebro por trás dos modelos.</p>
           </a>
           <a href="#" class="card agenda-link-card border-top-primary animate-cascade" data-slide-index="4" data-delay="0.2">
-            <span class="agenda-icon">🔄</span>
+            <span class="agenda-icon"><i data-lucide="refresh-cw" class="agenda-icon-svg"></i></span>
             <h3>A Virada de 2025</h3>
             <p style="font-size: 0.75rem; margin-top: 8px;">O novo paradigma da inteligência.</p>
           </a>
           <a href="#" class="card agenda-link-card border-top-primary animate-cascade" data-slide-index="5" data-delay="0.3">
-            <span class="agenda-icon">⚙️</span>
+            <span class="agenda-icon"><i data-lucide="settings" class="agenda-icon-svg"></i></span>
             <h3>Agentes e Harness</h3>
             <p style="font-size: 0.75rem; margin-top: 8px;">Como a IA executa tarefas no mundo real.</p>
           </a>
           <a href="#" class="card agenda-link-card border-top-secondary animate-cascade" data-slide-index="6" data-delay="0.4">
-            <span class="agenda-icon">📖</span>
+            <span class="agenda-icon"><i data-lucide="book-open" class="agenda-icon-svg"></i></span>
             <h3>Dicionário</h3>
             <p style="font-size: 0.75rem; margin-top: 8px;">Conceitos essenciais explicados.</p>
           </a>
           <a href="#" class="card agenda-link-card border-top-secondary animate-cascade" data-slide-index="7" data-delay="0.5">
-            <span class="agenda-icon">🏆</span>
+            <span class="agenda-icon"><i data-lucide="trophy" class="agenda-icon-svg"></i></span>
             <h3>Modelos de Fronteira</h3>
             <p style="font-size: 0.75rem; margin-top: 8px;">Quem lidera o mercado hoje.</p>
           </a>
           <a href="#" class="card agenda-link-card border-top-tertiary animate-cascade" data-slide-index="11" data-delay="0.6">
-            <span class="agenda-icon">⚖️</span>
+            <span class="agenda-icon"><i data-lucide="scale" class="agenda-icon-svg"></i></span>
             <h3>Comparativo</h3>
             <p style="font-size: 0.75rem; margin-top: 8px;">Análise cruzada de IDEs e CLIs.</p>
           </a>
           <a href="#" class="card agenda-link-card border-top-tertiary animate-cascade" data-slide-index="13" data-delay="0.7">
-            <span class="agenda-icon">👥</span>
+            <span class="agenda-icon"><i data-lucide="users" class="agenda-icon-svg"></i></span>
             <h3>Adoção da Equipe</h3>
             <p style="font-size: 0.75rem; margin-top: 8px;">Recomendações e plano de ação.</p>
           </a>
@@ -214,7 +230,7 @@
         <div class="grid-2">
           <!-- Coluna Esquerda: Analogia -->
           <div class="card border-top-primary" style="display: flex; flex-direction: column; justify-content: center; padding: 32px;">
-            <div style="font-size: 3rem; margin-bottom: 16px;">📱</div>
+            <div style="margin-bottom: 16px;"><i data-lucide="smartphone" style="width:3rem;height:3rem;color:var(--color-primary);"></i></div>
             <h3 style="margin-bottom: 12px;">A Analogia do Teclado</h3>
             <p style="margin-bottom: 16px;">Pense no corretor ortográfico ou no autocomplete do seu smartphone que sugere a próxima palavra.</p>
             <p><strong>Uma LLM faz o mesmo:</strong> porém, ela foi treinada em centenas de bilhões de frases da internet, repositórios de código e livros, prevendo as sequências com um realismo impressionante.</p>
@@ -227,7 +243,7 @@
               <div class="flip-card-container">
                 <div class="flip-card">
                   <div class="flip-card-front">
-                    <span style="font-size: 1.5rem; margin-bottom: 4px;">🔤</span>
+                    <i data-lucide="type" style="width:1.5rem;height:1.5rem;margin-bottom:4px;color:var(--color-primary);"></i>
                     <strong style="font-size: 0.9rem;">Token</strong>
                   </div>
                   <div class="flip-card-back">
@@ -239,7 +255,7 @@
               <div class="flip-card-container">
                 <div class="flip-card">
                   <div class="flip-card-front">
-                    <span style="font-size: 1.5rem; margin-bottom: 4px;">💬</span>
+                    <i data-lucide="message-square" style="width:1.5rem;height:1.5rem;margin-bottom:4px;color:var(--color-primary);"></i>
                     <strong style="font-size: 0.9rem;">Prompt</strong>
                   </div>
                   <div class="flip-card-back">
@@ -251,7 +267,7 @@
               <div class="flip-card-container">
                 <div class="flip-card">
                   <div class="flip-card-front">
-                    <span style="font-size: 1.5rem; margin-bottom: 4px;">⚖️</span>
+                    <i data-lucide="sliders" style="width:1.5rem;height:1.5rem;margin-bottom:4px;color:var(--color-primary);"></i>
                     <strong style="font-size: 0.9rem;">Parâmetros</strong>
                   </div>
                   <div class="flip-card-back">
@@ -263,7 +279,7 @@
               <div class="flip-card-container">
                 <div class="flip-card">
                   <div class="flip-card-front">
-                    <span style="font-size: 1.5rem; margin-bottom: 4px;">🪟</span>
+                    <i data-lucide="maximize" style="width:1.5rem;height:1.5rem;margin-bottom:4px;color:var(--color-primary);"></i>
                     <strong style="font-size: 0.9rem;">Contexto</strong>
                   </div>
                   <div class="flip-card-back">
@@ -275,7 +291,7 @@
               <div class="flip-card-container">
                 <div class="flip-card">
                   <div class="flip-card-front">
-                    <span style="font-size: 1.5rem; margin-bottom: 4px;">⚡</span>
+                    <i data-lucide="zap" style="width:1.5rem;height:1.5rem;margin-bottom:4px;color:var(--color-primary);"></i>
                     <strong style="font-size: 0.9rem;">Níveis & Esforço</strong>
                   </div>
                   <div class="flip-card-back">
@@ -287,7 +303,7 @@
               <div class="flip-card-container">
                 <div class="flip-card">
                   <div class="flip-card-front">
-                    <span style="font-size: 1.5rem; margin-bottom: 4px;">🌡️</span>
+                    <i data-lucide="thermometer" style="width:1.5rem;height:1.5rem;margin-bottom:4px;color:var(--color-primary);"></i>
                     <strong style="font-size: 0.9rem;">Temp. & Alucinação</strong>
                   </div>
                   <div class="flip-card-back">
@@ -318,7 +334,7 @@
           <!-- Lado Esquerdo: Antigo -->
           <div class="split-pane pane-left">
             <div>
-              <div class="pane-title">❌ Escalabilidade Bruta (2020-2024)</div>
+              <div class="pane-title"><i data-lucide="x-circle" style="width:1.4rem;height:1.4rem;color:var(--color-danger);flex-shrink:0;"></i> Escalabilidade Bruta (2020-2024)</div>
               <p style="font-size: 0.9rem;">Foco principal no aumento maciço de dados e parâmetros. Retornos começaram a decair.</p>
             </div>
             
@@ -338,38 +354,38 @@
             </div>
             
             <div>
-              <span class="badge badge-danger">⚠️ Retornos Decrescentes</span>
+              <span class="badge badge-danger"><i data-lucide="alert-triangle" style="width:0.75rem;height:0.75rem;margin-right:4px;"></i> Retornos Decrescentes</span>
             </div>
           </div>
 
           <!-- Lado Direito: Novo -->
           <div class="split-pane pane-right">
             <div>
-              <div class="pane-title">✅ Eficiência e Raciocínio (2025-2026)</div>
+              <div class="pane-title"><i data-lucide="check-circle" style="width:1.4rem;height:1.4rem;color:var(--color-primary);flex-shrink:0;"></i> Eficiência e Raciocínio (2025-2026)</div>
               <p style="font-size: 0.9rem;">Modelos menores, altamente refinados e focados em raciocínio encadeado (CoT).</p>
             </div>
             
             <div class="pane-content" style="gap: 8px;">
               <div class="stacked-concept-row" style="padding: 8px 12px;">
-                <span>🧵 Chain-of-Thought (CoT)</span>
+                <span><i data-lucide="git-branch" style="width:1rem;height:1rem;margin-right:6px;vertical-align:middle;"></i> Chain-of-Thought (CoT)</span>
                 <button class="modal-open-btn" data-modal-type="cot">Ver Técnica</button>
               </div>
               <div class="stacked-concept-row" style="padding: 8px 12px;">
-                <span>👥 Feedback Humano (RLHF)</span>
+                <span><i data-lucide="users" style="width:1rem;height:1rem;margin-right:6px;vertical-align:middle;"></i> Feedback Humano (RLHF)</span>
                 <button class="modal-open-btn" data-modal-type="rlhf">Ver Técnica</button>
               </div>
               <div class="stacked-concept-row" style="padding: 8px 12px;">
-                <span>📦 Destilação de Código</span>
+                <span><i data-lucide="package" style="width:1rem;height:1rem;margin-right:6px;vertical-align:middle;"></i> Destilação de Código</span>
                 <button class="modal-open-btn" data-modal-type="distillation">Ver Técnica</button>
               </div>
               <div class="stacked-concept-row" style="padding: 8px 12px;">
-                <span>🧪 Dados Sintéticos</span>
+                <span><i data-lucide="flask-conical" style="width:1rem;height:1rem;margin-right:6px;vertical-align:middle;"></i> Dados Sintéticos</span>
                 <button class="modal-open-btn" data-modal-type="synthetic">Ver Técnica</button>
               </div>
             </div>
             
             <div>
-              <span class="badge badge-primary">✅ Menor Custo, Maior Raciocínio</span>
+              <span class="badge badge-primary"><i data-lucide="trending-up" style="width:0.75rem;height:0.75rem;margin-right:4px;"></i> Menor Custo, Maior Raciocínio</span>
             </div>
           </div>
         </div>
@@ -395,7 +411,7 @@
           <!-- Camada 1: Agente -->
           <div class="diagram-layer" id="layer-agente">
             <div class="diagram-layer-title">
-              <span>🤖 AGENTE DE IA</span>
+              <span><i data-lucide="bot" style="width:1.1rem;height:1.1rem;margin-right:6px;vertical-align:middle;"></i> AGENTE DE IA</span>
               <span class="badge badge-secondary" style="font-size: 0.65rem;">Orquestrador</span>
             </div>
             <div class="diagram-layer-content">
@@ -406,17 +422,17 @@
           <!-- Camada 2: Harness -->
           <div class="diagram-layer" id="layer-harness">
             <div class="diagram-layer-title">
-              <span>⚙️ HARNESS (Suporte Agêntico)</span>
+              <span><i data-lucide="settings-2" style="width:1.1rem;height:1.1rem;margin-right:6px;vertical-align:middle;"></i> HARNESS (Suporte Agêntico)</span>
               <span class="badge badge-primary" style="font-size: 0.65rem;">Camada de Ação</span>
             </div>
             <div class="diagram-layer-content">
               O corpo físico da IA. O Harness fornece loops de execução (Pensar → Agir → Observar), memória persistente, acesso direto ao terminal/arquivos e filtros críticos de segurança.
               <div class="floating-badges-container">
-                <span class="badge badge-tertiary">🔄 Loop</span>
-                <span class="badge badge-tertiary">🧠 Memória</span>
-                <span class="badge badge-tertiary">🛠️ Ferramentas</span>
-                <span class="badge badge-tertiary">🛡️ Segurança</span>
-                <span class="badge badge-tertiary">📊 Observabilidade</span>
+                <span class="badge badge-tertiary"><i data-lucide="refresh-cw" style="width:0.7rem;height:0.7rem;margin-right:3px;"></i> Loop</span>
+                <span class="badge badge-tertiary"><i data-lucide="database" style="width:0.7rem;height:0.7rem;margin-right:3px;"></i> Memória</span>
+                <span class="badge badge-tertiary"><i data-lucide="wrench" style="width:0.7rem;height:0.7rem;margin-right:3px;"></i> Ferramentas</span>
+                <span class="badge badge-tertiary"><i data-lucide="shield" style="width:0.7rem;height:0.7rem;margin-right:3px;"></i> Segurança</span>
+                <span class="badge badge-tertiary"><i data-lucide="bar-chart-2" style="width:0.7rem;height:0.7rem;margin-right:3px;"></i> Observabilidade</span>
               </div>
             </div>
           </div>
@@ -424,7 +440,7 @@
           <!-- Camada 3: LLM -->
           <div class="diagram-layer" id="layer-llm">
             <div class="diagram-layer-title">
-              <span>🧠 LLM (Large Language Model)</span>
+              <span><i data-lucide="brain" style="width:1.1rem;height:1.1rem;margin-right:6px;vertical-align:middle;"></i> LLM (Large Language Model)</span>
               <span class="badge badge-dark" style="font-size: 0.65rem;">Motor de Decisão</span>
             </div>
             <div class="diagram-layer-content">
@@ -462,57 +478,57 @@
         </div>
 
         <!-- Cards do Grid -->
-        <div class="grid-3" style="max-height: 380px; overflow-y: auto; padding: 4px;">
+        <div class="grid-3 dict-grid" style="flex: 1; overflow: hidden; padding: 4px;">
           <div class="card dict-card animate-cascade" data-category="modelos" data-concept="llm" data-delay="0.0">
-            <span style="font-size: 1.5rem;">🧠</span>
+            <i data-lucide="brain" style="width:2rem;height:2rem;color:var(--color-primary);"></i>
             <h3 style="font-size: 0.95rem; margin-top: 8px;">LLM</h3>
             <span class="badge badge-primary" style="font-size: 0.6rem; margin-top: 6px;">Modelos</span>
           </div>
           
           <div class="card dict-card animate-cascade" data-category="arquitetura" data-concept="harness" data-delay="0.1">
-            <span style="font-size: 1.5rem;">⚙️</span>
+            <i data-lucide="settings-2" style="width:2rem;height:2rem;color:var(--color-secondary);"></i>
             <h3 style="font-size: 0.95rem; margin-top: 8px;">Harness</h3>
             <span class="badge badge-secondary" style="font-size: 0.6rem; margin-top: 6px;">Arquitetura</span>
           </div>
 
           <div class="card dict-card animate-cascade" data-category="arquitetura" data-concept="agente" data-delay="0.2">
-            <span style="font-size: 1.5rem;">🤖</span>
+            <i data-lucide="bot" style="width:2rem;height:2rem;color:var(--color-secondary);"></i>
             <h3 style="font-size: 0.95rem; margin-top: 8px;">Agente de IA</h3>
             <span class="badge badge-secondary" style="font-size: 0.6rem; margin-top: 6px;">Arquitetura</span>
           </div>
 
           <div class="card dict-card animate-cascade" data-category="protocolos" data-concept="mcp" data-delay="0.3">
-            <span style="font-size: 1.5rem;">🔌</span>
+            <i data-lucide="plug" style="width:2rem;height:2rem;color:var(--color-tertiary);"></i>
             <h3 style="font-size: 0.95rem; margin-top: 8px;">MCP</h3>
             <span class="badge badge-tertiary" style="font-size: 0.6rem; margin-top: 6px;">Protocolos</span>
           </div>
 
           <div class="card dict-card animate-cascade" data-category="arquitetura" data-concept="rag" data-delay="0.4">
-            <span style="font-size: 1.5rem;">🧵</span>
+            <i data-lucide="git-merge" style="width:2rem;height:2rem;color:var(--color-secondary);"></i>
             <h3 style="font-size: 0.95rem; margin-top: 8px;">RAG</h3>
             <span class="badge badge-secondary" style="font-size: 0.6rem; margin-top: 6px;">Arquitetura</span>
           </div>
 
           <div class="card dict-card animate-cascade" data-category="arquitetura" data-concept="vetorial" data-delay="0.5">
-            <span style="font-size: 1.5rem;">🗄️</span>
+            <i data-lucide="server" style="width:2rem;height:2rem;color:var(--color-secondary);"></i>
             <h3 style="font-size: 0.95rem; margin-top: 8px;">Banco Vetorial</h3>
             <span class="badge badge-secondary" style="font-size: 0.6rem; margin-top: 6px;">Arquitetura</span>
           </div>
 
           <div class="card dict-card animate-cascade" data-category="modelos" data-concept="cot" data-delay="0.6">
-            <span style="font-size: 1.5rem;">🪢</span>
+            <i data-lucide="link" style="width:2rem;height:2rem;color:var(--color-primary);"></i>
             <h3 style="font-size: 0.95rem; margin-top: 8px;">Chain-of-Thought</h3>
             <span class="badge badge-primary" style="font-size: 0.6rem; margin-top: 6px;">Modelos</span>
           </div>
 
           <div class="card dict-card animate-cascade" data-category="arquitetura" data-concept="mas" data-delay="0.7">
-            <span style="font-size: 1.5rem;">👥</span>
+            <i data-lucide="users" style="width:2rem;height:2rem;color:var(--color-secondary);"></i>
             <h3 style="font-size: 0.95rem; margin-top: 8px;">MAS (Multiagente)</h3>
             <span class="badge badge-secondary" style="font-size: 0.6rem; margin-top: 6px;">Arquitetura</span>
           </div>
 
           <div class="card dict-card animate-cascade" data-category="seguranca" data-concept="hitl" data-delay="0.8">
-            <span style="font-size: 1.5rem;">🛡️</span>
+            <i data-lucide="shield" style="width:2rem;height:2rem;color:var(--color-danger);"></i>
             <h3 style="font-size: 0.95rem; margin-top: 8px;">HITL</h3>
             <span class="badge badge-danger" style="font-size: 0.6rem; margin-top: 6px;">Segurança</span>
           </div>
@@ -555,7 +571,7 @@
               <tbody>
                 <tr>
                   <td><strong>GPT-5.5</strong></td>
-                  <td><span class="badge badge-primary">✅ Ativo</span></td>
+                  <td><span class="badge badge-primary"><i data-lucide="check-circle" style="width:0.7rem;height:0.7rem;margin-right:3px;"></i> Ativo</span></td>
                   <td>Flagship atual para Codex e ChatGPT. Excelente consistência e velocidade.</td>
                 </tr>
                 <tr>
@@ -627,8 +643,8 @@
               <tbody>
                 <tr>
                   <td><strong>Gemini 3.5 Flash</strong></td>
-                  <td><span class="badge badge-primary">✅ Ativo</span></td>
-                  <td>Velocidade incomparável. Lidera com a maior janela de contexto do mercado: <strong>2 Milhões de tokens</strong>.</td>
+                  <td><span class="badge badge-primary"><i data-lucide="check-circle" style="width:0.7rem;height:0.7rem;margin-right:3px;"></i> Ativo</span></td>
+                  <td>Velocidade incomparável com janela de contexto de <strong>1 Milhão de tokens</strong> (1.048.576 tokens) e suporte nativo a entrada multimodal.</td>
                 </tr>
                 <tr>
                   <td>Gemini 3.5 Pro</td>
@@ -659,7 +675,10 @@
       <div class="slide-header">
         <div class="slide-header-left">
           <span class="slide-category">Ferramentas principais</span>
-          <h2>Antigravity (Google DeepMind)</h2>
+          <h2 style="display:flex;align-items:center;gap:12px;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 24 24" style="flex-shrink:0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            Antigravity (Google DeepMind)
+          </h2>
         </div>
         <span class="badge badge-primary">Google SOTA</span>
       </div>
@@ -672,32 +691,32 @@
             <p style="margin-bottom: 8px;">A ferramenta oficial da Google DeepMind que une motor CLI, app visual e fork da IDE em uma única arquitetura sincronizada.</p>
             <div class="provider-meta-row">
               <span class="badge badge-dark">Modelo Principal: Gemini 3.5 Flash</span>
-              <span class="badge badge-tertiary">Janela: 2M Tokens</span>
+              <span class="badge badge-tertiary">Janela: 1M Tokens</span>
             </div>
           </div>
 
           <!-- 3 interfaces -->
           <div class="grid-3">
             <div class="card" style="padding: 16px;">
-              <h4 style="margin-bottom: 8px;">⌨️ CLI (Terminal Go)</h4>
+              <h4 style="margin-bottom: 8px; display:flex; align-items:center; gap:6px;"><i data-lucide="terminal" style="width:1rem;height:1rem;color:var(--color-primary);"></i> CLI (Terminal Go)</h4>
               <p style="font-size: 0.8rem; line-height: 1.4;">Alta performance compilada em Go. Substituiu por completo o Gemini CLI em 18/Jun/2026. Excelente para tarefas assíncronas.</p>
             </div>
             <div class="card" style="padding: 16px;">
-              <h4 style="margin-bottom: 8px;">🖥️ APP (Desktop 2.0)</h4>
+              <h4 style="margin-bottom: 8px; display:flex; align-items:center; gap:6px;"><i data-lucide="monitor" style="width:1rem;height:1rem;color:var(--color-primary);"></i> APP (Desktop 2.0)</h4>
               <p style="font-size: 0.8rem; line-height: 1.4;">Painel completo para monitoramento multi-agente e tarefas agendadas em background. Integração nativa com ecossistema Firebase.</p>
             </div>
             <div class="card" style="padding: 16px;">
-              <h4 style="margin-bottom: 8px;">🛠️ IDE (VS Code Fork)</h4>
+              <h4 style="margin-bottom: 8px; display:flex; align-items:center; gap:6px;"><i data-lucide="code-2" style="width:1rem;height:1rem;color:var(--color-primary);"></i> IDE (VS Code Fork)</h4>
               <p style="font-size: 0.8rem; line-height: 1.4;">Editor nativo com painéis integrados (Editor vs. Manager Surface) para codificação supervisionada e escrita assistida.</p>
             </div>
           </div>
 
           <!-- Feature tags -->
           <div class="provider-features-list">
-            <div class="provider-feature-item">🔀 <strong>Subagentes Dinâmicos:</strong> Spawn de processos em paralelo.</div>
-            <div class="provider-feature-item">📋 <strong>Artefatos:</strong> Planos estruturados gerados em Markdown interativo.</div>
-            <div class="provider-feature-item">🔬 <strong>Science Skills:</strong> Integração nativa com bases AlphaGenome.</div>
-            <div class="provider-feature-item">🐍 <strong>Python SDK:</strong> Facilidade para customizar ganchos do agente.</div>
+            <div class="provider-feature-item"><i data-lucide="git-branch" style="width:1rem;height:1rem;margin-right:6px;flex-shrink:0;color:var(--color-primary);"></i> <strong>Subagentes Dinâmicos:</strong> Spawn de processos em paralelo.</div>
+            <div class="provider-feature-item"><i data-lucide="file-text" style="width:1rem;height:1rem;margin-right:6px;flex-shrink:0;color:var(--color-primary);"></i> <strong>Artefatos:</strong> Planos estruturados gerados em Markdown interativo.</div>
+            <div class="provider-feature-item"><i data-lucide="microscope" style="width:1rem;height:1rem;margin-right:6px;flex-shrink:0;color:var(--color-primary);"></i> <strong>Science Skills:</strong> Integração nativa com bases AlphaGenome.</div>
+            <div class="provider-feature-item"><i data-lucide="code" style="width:1rem;height:1rem;margin-right:6px;flex-shrink:0;color:var(--color-primary);"></i> <strong>Python SDK:</strong> Facilidade para customizar ganchos do agente.</div>
           </div>
         </div>
       </div>
@@ -710,7 +729,10 @@
       <div class="slide-header">
         <div class="slide-header-left">
           <span class="slide-category">Ferramentas principais</span>
-          <h2>Codex (OpenAI)</h2>
+          <h2 style="display:flex;align-items:center;gap:12px;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;color:#2c2a26;"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></svg>
+            Codex (OpenAI)
+          </h2>
         </div>
         <span class="badge badge-primary">OpenAI Flagship</span>
       </div>
@@ -730,11 +752,11 @@
           <!-- 2 interfaces -->
           <div class="grid-2">
             <div class="card">
-              <h4 style="margin-bottom: 8px;">⌨️ CLI</h4>
+              <h4 style="margin-bottom: 8px; display:flex; align-items:center; gap:6px;"><i data-lucide="terminal" style="width:1rem;height:1rem;color:var(--color-secondary);"></i> CLI</h4>
               <p style="font-size: 0.85rem;">Inicia tarefas complexas locais e as exporta dinamicamente para o aplicativo visual para acompanhamento humano do fluxo de trabalho.</p>
             </div>
             <div class="card">
-              <h4 style="margin-bottom: 8px;">🖥️ APP (Desktop & Web)</h4>
+              <h4 style="margin-bottom: 8px; display:flex; align-items:center; gap:6px;"><i data-lucide="monitor" style="width:1rem;height:1rem;color:var(--color-secondary);"></i> APP (Desktop &amp; Web)</h4>
               <p style="font-size: 0.85rem;">Central gráfica contendo o painel "Codex Sites" para gerar deploys imediatos de protótipos de desenvolvimento direto da interface.</p>
             </div>
           </div>
@@ -742,7 +764,7 @@
           <!-- Alerta de limite -->
           <div class="card border-top-danger" style="background-color: rgba(196, 90, 58, 0.05); padding: 16px;">
             <div style="display: flex; gap: 12px; align-items: center;">
-              <span style="font-size: 1.5rem;">⚠️</span>
+              <i data-lucide="alert-triangle" style="width:1.5rem;height:1.5rem;flex-shrink:0;color:var(--color-danger);"></i>
               <div>
                 <strong>Alerta de Capacidade:</strong> O GPT-5.5 apresenta problemas recorrentes de "Model at capacity" em horários de pico, especialmente com níveis de raciocínio de alto esforço (xhigh effort).
               </div>
@@ -759,7 +781,10 @@
       <div class="slide-header">
         <div class="slide-header-left">
           <span class="slide-category">Ferramentas principais</span>
-          <h2>Claude Code (Anthropic)</h2>
+          <h2 style="display:flex;align-items:center;gap:12px;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:#d97757;fill:#d97757;"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+            Claude Code (Anthropic)
+          </h2>
         </div>
         <span class="badge badge-primary">Anthropic CLI-First</span>
       </div>
@@ -779,16 +804,16 @@
           <!-- 2 colunas -->
           <div class="grid-2">
             <div class="card" style="padding: 16px;">
-              <h4 style="margin-bottom: 6px;">🚀 Funcionalidades Chave</h4>
+              <h4 style="margin-bottom: 6px; display:flex; align-items:center; gap:6px;"><i data-lucide="rocket" style="width:1rem;height:1rem;color:var(--color-tertiary);"></i> Funcionalidades Chave</h4>
               <div class="provider-features-list" style="grid-template-columns: 1fr; gap: 6px; margin-top: 8px;">
-                <div class="provider-feature-item">📁 <strong>CLAUDE.md:</strong> Arquivo de regras personalizáveis do repositório.</div>
-                <div class="provider-feature-item">🔌 <strong>MCP Nativo:</strong> Conexão padronizada com bases SQL, Slack, etc.</div>
-                <div class="provider-feature-item">🧭 <strong>Planning Mode:</strong> Criação prévia do plano antes do código.</div>
+                <div class="provider-feature-item"><i data-lucide="file-text" style="width:1rem;height:1rem;margin-right:6px;flex-shrink:0;color:var(--color-tertiary);"></i> <strong>CLAUDE.md:</strong> Arquivo de regras personalizáveis do repositório.</div>
+                <div class="provider-feature-item"><i data-lucide="plug" style="width:1rem;height:1rem;margin-right:6px;flex-shrink:0;color:var(--color-tertiary);"></i> <strong>MCP Nativo:</strong> Conexão padronizada com bases SQL, Slack, etc.</div>
+                <div class="provider-feature-item"><i data-lucide="map" style="width:1rem;height:1rem;margin-right:6px;flex-shrink:0;color:var(--color-tertiary);"></i> <strong>Planning Mode:</strong> Criação prévia do plano antes do código.</div>
               </div>
             </div>
 
             <div class="card border-top-secondary" style="background-color: rgba(196, 124, 58, 0.05); padding: 16px; display: flex; flex-direction: column; justify-content: center;">
-              <h4 style="margin-bottom: 6px; color: var(--color-secondary);">⚠️ Mudança Crítica (15/Jun/2026)</h4>
+              <h4 style="margin-bottom: 6px; color: var(--color-secondary); display:flex; align-items:center; gap:6px;"><i data-lucide="alert-triangle" style="width:1rem;height:1rem;"></i> Mudança Crítica (15/Jun/2026)</h4>
               <p style="font-size: 0.8rem; line-height: 1.4;">O uso automatizado e sem supervisão (headless / CI/CD) foi removido da assinatura Pro. O faturamento desse tráfego agora é debitado via sistema de créditos por token em dólares.</p>
             </div>
           </div>
@@ -840,7 +865,7 @@
               </tr>
               <tr>
                 <td><strong>Contexto Máx.</strong></td>
-                <td data-best>2M tokens</td>
+                <td data-best>1M tokens</td>
                 <td>1M tokens (Fable)</td>
                 <td>~200K tokens</td>
                 <td>Variável (por modelo)</td>
@@ -900,13 +925,16 @@
         <div class="grid-3" style="margin-bottom: 20px;">
           <!-- Card Codex -->
           <div class="pricing-card" data-provider="codex">
-            <h3 class="pricing-card-title">OpenAI Codex</h3>
+            <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px;">
+              <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;color:#2c2a26;"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></svg>
+              <h3 class="pricing-card-title" style="margin-bottom:0;">OpenAI Codex</h3>
+            </div>
             <div>
               <div class="pricing-card-price">$20<span>/ mês</span></div>
               <ul class="pricing-features">
-                <li>✅ ChatGPT Plus: $20/mês</li>
-                <li>✅ ChatGPT Pro: $100/mês (5x cota)</li>
-                <li>✅ ChatGPT Pro: $200/mês (20x cota)</li>
+                <li><i data-lucide="check-circle" style="width:0.85rem;height:0.85rem;color:var(--color-primary);flex-shrink:0;"></i> ChatGPT Plus: $20/mês (apenas mensal)</li>
+                <li><i data-lucide="check-circle" style="width:0.85rem;height:0.85rem;color:var(--color-primary);flex-shrink:0;"></i> ChatGPT Pro: $100/mês (5x — apenas mensal)</li>
+                <li><i data-lucide="check-circle" style="width:0.85rem;height:0.85rem;color:var(--color-primary);flex-shrink:0;"></i> ChatGPT Pro: $200/mês (20x — apenas mensal)</li>
               </ul>
             </div>
             <span class="badge badge-dark">Interface GPT-5.5</span>
@@ -914,13 +942,16 @@
 
           <!-- Card Claude -->
           <div class="pricing-card" data-provider="claude">
-            <h3 class="pricing-card-title">Claude Code</h3>
+            <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px;">
+              <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:#d97757;fill:#d97757;"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+              <h3 class="pricing-card-title" style="margin-bottom:0;">Claude Code</h3>
+            </div>
             <div>
               <div class="pricing-card-price">$20<span>/ mês</span></div>
               <ul class="pricing-features">
-                <li>✅ Claude Pro: $20/mês</li>
-                <li>✅ Claude Max 5x: $100/mês</li>
-                <li>✅ Claude Max 20x: $200/mês</li>
+                <li><i data-lucide="check-circle" style="width:0.85rem;height:0.85rem;color:var(--color-primary);flex-shrink:0;"></i> Claude Pro: $20/mês ($17/mês anual)</li>
+                <li><i data-lucide="check-circle" style="width:0.85rem;height:0.85rem;color:var(--color-primary);flex-shrink:0;"></i> Claude Max 5x: $100/mês (apenas mensal)</li>
+                <li><i data-lucide="check-circle" style="width:0.85rem;height:0.85rem;color:var(--color-primary);flex-shrink:0;"></i> Claude Max 20x: $200/mês (apenas mensal)</li>
               </ul>
             </div>
             <span class="badge badge-tertiary">Interface Claude Fable/Opus</span>
@@ -928,13 +959,16 @@
 
           <!-- Card Antigravity -->
           <div class="pricing-card" data-provider="antigravity">
-            <h3 class="pricing-card-title">Antigravity</h3>
+            <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px;">
+              <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 0 24 24" style="flex-shrink:0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+              <h3 class="pricing-card-title" style="margin-bottom:0;">Antigravity</h3>
+            </div>
             <div>
-              <div class="pricing-card-price">$19<span>/ mês</span></div>
+              <div class="pricing-card-price">$19.99<span>/ mês</span></div>
               <ul class="pricing-features">
-                <li>✅ Google AI Pro: $19.99/mês</li>
-                <li>✅ Google AI Ultra: $99.99/mês (5x)</li>
-                <li>✅ Google AI Ultra+: $199.99/mês (20x)</li>
+                <li><i data-lucide="check-circle" style="width:0.85rem;height:0.85rem;color:var(--color-primary);flex-shrink:0;"></i> Google AI Pro (5 TB): $19.99/mês ($199.90/ano)</li>
+                <li><i data-lucide="check-circle" style="width:0.85rem;height:0.85rem;color:var(--color-primary);flex-shrink:0;"></i> Google AI Pro (10 TB): $79.99/mês ($799.90/ano)</li>
+                <li><i data-lucide="check-circle" style="width:0.85rem;height:0.85rem;color:var(--color-primary);flex-shrink:0;"></i> Google AI Ultra (30 TB): $199.99/mês ($1999.90/ano)</li>
               </ul>
             </div>
             <span class="badge badge-primary">IDE + CLI Sincronizado</span>
@@ -943,8 +977,8 @@
 
         <!-- Alerta Copilot -->
         <div class="card border-top-danger" style="background-color: rgba(196, 90, 58, 0.05); padding: 12px; width: 100%; text-align: left;">
-          <div style="font-size: 0.85rem; line-height: 1.4;">
-            ⛔ <strong>Alerta Copilot:</strong> Novas assinaturas do GitHub Copilot estão <strong>pausadas desde 20/Abr/2026</strong> por tempo indeterminado devido a problemas severos de billing e downgrades. Não recomendado para novos times.
+          <div style="font-size: 0.85rem; line-height: 1.4; display:flex; align-items:center; gap:8px;">
+            <i data-lucide="ban" style="width:1rem;height:1rem;flex-shrink:0;color:var(--color-danger);"></i> <strong>Alerta Copilot:</strong> Novas assinaturas do GitHub Copilot estão <strong>pausadas desde 20/Abr/2026</strong> por tempo indeterminado devido a problemas severos de billing e downgrades. Não recomendado para novos times.
           </div>
         </div>
       </div>
@@ -969,7 +1003,7 @@
           <!-- Level 1: Gerência -->
           <div class="org-level">
             <div class="org-card" style="border-top: 4px solid var(--color-secondary);" data-dev-id="gerente">
-              <div class="org-avatar">👤</div>
+              <div class="org-avatar"><i data-lucide="user" style="width:2.2rem;height:2.2rem;color:var(--color-secondary);"></i></div>
               <div class="org-name">Glaucia Porto</div>
               <div class="org-role">Gestora de Projetos</div>
               <div class="org-tech-tags">
@@ -981,7 +1015,7 @@
           <!-- Level 2: Devs -->
           <div class="org-level">
             <div class="org-card" style="border-top: 4px solid var(--color-primary);" data-dev-id="senior">
-              <div class="org-avatar">🥇</div>
+              <div class="org-avatar"><i data-lucide="medal" style="width:2.2rem;height:2.2rem;color:var(--color-primary);"></i></div>
               <div class="org-name">Alex Carreira</div>
               <div class="org-role">Dev Sênior (PHP/Java/DB)</div>
               <div class="org-tech-tags">
@@ -990,7 +1024,7 @@
             </div>
 
             <div class="org-card" style="border-top: 4px solid var(--color-tertiary);" data-dev-id="frontend">
-              <div class="org-avatar">🎨</div>
+              <div class="org-avatar"><i data-lucide="palette" style="width:2.2rem;height:2.2rem;color:var(--color-tertiary);"></i></div>
               <div class="org-name">Thiérry Amaral</div>
               <div class="org-role">Dev Front-end (React/Vite)</div>
               <div class="org-tech-tags">
@@ -999,7 +1033,7 @@
             </div>
 
             <div class="org-card" style="border-top: 4px solid var(--color-tertiary);" data-dev-id="backend">
-              <div class="org-avatar">⚙️</div>
+              <div class="org-avatar"><i data-lucide="server" style="width:2.2rem;height:2.2rem;color:var(--color-tertiary);"></i></div>
               <div class="org-name">Rodolfo Gama</div>
               <div class="org-role">Dev Back-end (Java/Spring)</div>
               <div class="org-tech-tags">
@@ -1008,7 +1042,7 @@
             </div>
 
             <div class="org-card" style="border-top: 4px solid var(--text-secondary);" data-dev-id="fullstack1">
-              <div class="org-avatar">🔧</div>
+              <div class="org-avatar"><i data-lucide="wrench" style="width:2.2rem;height:2.2rem;color:var(--text-secondary);"></i></div>
               <div class="org-name">Flavio Andrade</div>
               <div class="org-role">Dev Full-stack (PHP/Web)</div>
               <div class="org-tech-tags">
@@ -1017,7 +1051,7 @@
             </div>
 
             <div class="org-card" style="border-top: 4px solid var(--text-secondary);" data-dev-id="fullstack2">
-              <div class="org-avatar">🔧</div>
+              <div class="org-avatar"><i data-lucide="wrench" style="width:2.2rem;height:2.2rem;color:var(--text-secondary);"></i></div>
               <div class="org-name">Vitoria Rodrigues</div>
               <div class="org-role">Dev Full-stack (PHP/Web)</div>
               <div class="org-tech-tags">
@@ -1046,42 +1080,42 @@
           <!-- Sidebar -->
           <div class="dev-rec-sidebar">
             <div class="dev-rec-sidebar-item active" data-dev-id="gerente">
-              <span class="dev-rec-sidebar-avatar">👤</span>
+              <span class="dev-rec-sidebar-avatar"><i data-lucide="user" style="width:1.5rem;height:1.5rem;"></i></span>
               <div style="display: flex; flex-direction: column;">
                 <span class="dev-rec-sidebar-name">Glaucia Porto</span>
                 <span style="font-size: 0.65rem; color: var(--text-secondary); font-weight: 500;">Gestora</span>
               </div>
             </div>
             <div class="dev-rec-sidebar-item" data-dev-id="senior">
-              <span class="dev-rec-sidebar-avatar">🥇</span>
+              <span class="dev-rec-sidebar-avatar"><i data-lucide="medal" style="width:1.5rem;height:1.5rem;"></i></span>
               <div style="display: flex; flex-direction: column;">
                 <span class="dev-rec-sidebar-name">Alex Carreira</span>
                 <span style="font-size: 0.65rem; color: var(--text-secondary); font-weight: 500;">Sênior · PHP, Java, DB</span>
               </div>
             </div>
             <div class="dev-rec-sidebar-item" data-dev-id="frontend">
-              <span class="dev-rec-sidebar-avatar">🎨</span>
+              <span class="dev-rec-sidebar-avatar"><i data-lucide="palette" style="width:1.5rem;height:1.5rem;"></i></span>
               <div style="display: flex; flex-direction: column;">
                 <span class="dev-rec-sidebar-name">Thiérry Amaral</span>
                 <span style="font-size: 0.65rem; color: var(--text-secondary); font-weight: 500;">Front-end · React, TS</span>
               </div>
             </div>
             <div class="dev-rec-sidebar-item" data-dev-id="backend">
-              <span class="dev-rec-sidebar-avatar">⚙️</span>
+              <span class="dev-rec-sidebar-avatar"><i data-lucide="server" style="width:1.5rem;height:1.5rem;"></i></span>
               <div style="display: flex; flex-direction: column;">
                 <span class="dev-rec-sidebar-name">Rodolfo Gama</span>
                 <span style="font-size: 0.65rem; color: var(--text-secondary); font-weight: 500;">Back-end · Java, Spring</span>
               </div>
             </div>
             <div class="dev-rec-sidebar-item" data-dev-id="fullstack1">
-              <span class="dev-rec-sidebar-avatar">🔧</span>
+              <span class="dev-rec-sidebar-avatar"><i data-lucide="wrench" style="width:1.5rem;height:1.5rem;"></i></span>
               <div style="display: flex; flex-direction: column;">
                 <span class="dev-rec-sidebar-name">Flavio Andrade</span>
                 <span style="font-size: 0.65rem; color: var(--text-secondary); font-weight: 500;">Full-stack · PHP, Web</span>
               </div>
             </div>
             <div class="dev-rec-sidebar-item" data-dev-id="fullstack2">
-              <span class="dev-rec-sidebar-avatar">🔧</span>
+              <span class="dev-rec-sidebar-avatar"><i data-lucide="wrench" style="width:1.5rem;height:1.5rem;"></i></span>
               <div style="display: flex; flex-direction: column;">
                 <span class="dev-rec-sidebar-name">Vitoria Rodrigues</span>
                 <span style="font-size: 0.65rem; color: var(--text-secondary); font-weight: 500;">Full-stack · PHP, Web</span>
@@ -1095,16 +1129,19 @@
             <!-- Pane Gerente -->
             <div class="dev-rec-pane active" id="dev-pane-gerente">
               <div class="dev-rec-header">
-                <h3>👤 Glaucia Porto <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-secondary);">— Gestora</span></h3>
+                <h3 style="display:flex;align-items:center;gap:8px;"><i data-lucide="user" style="width:1.2rem;height:1.2rem;"></i> Glaucia Porto <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-secondary);">— Gestora</span></h3>
                 <span class="badge badge-dark">IDE Atual: Nenhuma (Gestão)</span>
               </div>
               <div class="dev-rec-cards-grid">
                 <div class="card border-top-primary">
-                  <h4>🛠️ Solução Recomendada</h4>
+                  <h4 style="display:flex;align-items:center;gap:6px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;vertical-align:middle;color:#2c2a26;"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></svg>
+                    Solução Recomendada
+                  </h4>
                   <p style="margin-top: 8px;"><strong>Codex APP</strong> (Interface Web/App do ChatGPT Pro/Plus) ou <strong>Antigravity APP</strong>.</p>
                 </div>
                 <div class="card border-top-tertiary">
-                  <h4>💡 Custo Estimado</h4>
+                  <h4 style="display:flex;align-items:center;gap:6px;"><i data-lucide="lightbulb" style="width:1rem;height:1rem;"></i> Custo Estimado</h4>
                   <p style="margin-top: 8px;"><strong>$20 / mês</strong> (Plano Plus/Pro básico).</p>
                 </div>
               </div>
@@ -1116,16 +1153,19 @@
             <!-- Pane Sênior -->
             <div class="dev-rec-pane" id="dev-pane-senior">
               <div class="dev-rec-header">
-                <h3>🥇 Alex Carreira <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-secondary);">— Dev Sênior (PHP, Java, DB, Front)</span></h3>
+                <h3 style="display:flex;align-items:center;gap:8px;"><i data-lucide="medal" style="width:1.2rem;height:1.2rem;"></i> Alex Carreira <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-secondary);">— Dev Sênior (PHP, Java, DB, Front)</span></h3>
                 <span class="badge badge-primary">IDE: IntelliJ Ultimate</span>
               </div>
               <div class="dev-rec-cards-grid">
                 <div class="card border-top-primary">
-                  <h4>🛠️ Solução Recomendada</h4>
+                  <h4 style="display:flex;align-items:center;gap:6px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:#d97757;fill:#d97757;"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+                    Solução Recomendada
+                  </h4>
                   <p style="margin-top: 8px;"><strong>JetBrains AI Assistant</strong> + <strong>Claude Code CLI</strong> (Claude Pro padrão).</p>
                 </div>
                 <div class="card border-top-tertiary">
-                  <h4>💡 Custo Estimado</h4>
+                  <h4 style="display:flex;align-items:center;gap:6px;"><i data-lucide="lightbulb" style="width:1rem;height:1rem;"></i> Custo Estimado</h4>
                   <p style="margin-top: 8px;"><strong>$20 / mês</strong> (Claude Pro padrão. Possível migração para Max 5x a $100/mês).</p>
                 </div>
               </div>
@@ -1137,16 +1177,19 @@
             <!-- Pane Front-end -->
             <div class="dev-rec-pane" id="dev-pane-frontend">
               <div class="dev-rec-header">
-                <h3>🎨 Thiérry Amaral <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-secondary);">— Dev Front-end (React, Vite, TS)</span></h3>
+                <h3 style="display:flex;align-items:center;gap:8px;"><i data-lucide="palette" style="width:1.2rem;height:1.2rem;"></i> Thiérry Amaral <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-secondary);">— Dev Front-end (React, Vite, TS)</span></h3>
                 <span class="badge badge-tertiary">IDE: VS Code</span>
               </div>
               <div class="dev-rec-cards-grid">
                 <div class="card border-top-primary">
-                  <h4>🛠️ Solução Recomendada</h4>
+                  <h4 style="display:flex;align-items:center;gap:6px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" style="flex-shrink:0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                    Solução Recomendada
+                  </h4>
                   <p style="margin-top: 8px;"><strong>Antigravity IDE</strong> (fork VS Code) ou Cursor Pro.</p>
                 </div>
                 <div class="card border-top-tertiary">
-                  <h4>💡 Custo Estimado</h4>
+                  <h4 style="display:flex;align-items:center;gap:6px;"><i data-lucide="lightbulb" style="width:1rem;height:1rem;"></i> Custo Estimado</h4>
                   <p style="margin-top: 8px;"><strong>$19.99 / mês</strong> (Plano Google AI Pro).</p>
                 </div>
               </div>
@@ -1158,16 +1201,19 @@
             <!-- Pane Back-end -->
             <div class="dev-rec-pane" id="dev-pane-backend">
               <div class="dev-rec-header">
-                <h3>⚙️ Rodolfo Gama <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-secondary);">— Dev Back-end (Java, Spring, DB)</span></h3>
+                <h3 style="display:flex;align-items:center;gap:8px;"><i data-lucide="server" style="width:1.2rem;height:1.2rem;"></i> Rodolfo Gama <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-secondary);">— Dev Back-end (Java, Spring, DB)</span></h3>
                 <span class="badge badge-secondary">IDE: IntelliJ Community</span>
               </div>
               <div class="dev-rec-cards-grid">
                 <div class="card border-top-primary">
-                  <h4>🛠️ Solução Recomendada</h4>
+                  <h4 style="display:flex;align-items:center;gap:6px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:#d97757;fill:#d97757;"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+                    Solução Recomendada
+                  </h4>
                   <p style="margin-top: 8px;"><strong>JetBrains AI Assistant Plugin</strong> + <strong>Claude Code CLI</strong> no terminal integrado.</p>
                 </div>
                 <div class="card border-top-tertiary">
-                  <h4>💡 Custo Estimado</h4>
+                  <h4 style="display:flex;align-items:center;gap:6px;"><i data-lucide="lightbulb" style="width:1rem;height:1rem;"></i> Custo Estimado</h4>
                   <p style="margin-top: 8px;"><strong>$20 / mês</strong> (Claude Pro padrão) + JetBrains AI Pro.</p>
                 </div>
               </div>
@@ -1179,16 +1225,19 @@
             <!-- Pane Full-stack 1 -->
             <div class="dev-rec-pane" id="dev-pane-fullstack1">
               <div class="dev-rec-header">
-                <h3>🔧 Flavio Andrade <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-secondary);">— Dev Full-stack (PHP, HTML, JS)</span></h3>
+                <h3 style="display:flex;align-items:center;gap:8px;"><i data-lucide="wrench" style="width:1.2rem;height:1.2rem;"></i> Flavio Andrade <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-secondary);">— Dev Full-stack (PHP, HTML, JS)</span></h3>
                 <span class="badge badge-dark">IDE: NetBeans</span>
               </div>
               <div class="dev-rec-cards-grid">
                 <div class="card border-top-primary">
-                  <h4>🛠️ Solução Recomendada</h4>
+                  <h4 style="display:flex;align-items:center;gap:6px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" style="flex-shrink:0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                    Solução Recomendada
+                  </h4>
                   <p style="margin-top: 8px;"><strong>Antigravity IDE</strong> (VS Code Fork) — Opção C: Migração Leve.</p>
                 </div>
                 <div class="card border-top-tertiary">
-                  <h4>💡 Custo Estimado</h4>
+                  <h4 style="display:flex;align-items:center;gap:6px;"><i data-lucide="lightbulb" style="width:1rem;height:1rem;"></i> Custo Estimado</h4>
                   <p style="margin-top: 8px;"><strong>$19.99 / mês</strong> (Plano Google AI Pro).</p>
                 </div>
               </div>
@@ -1200,16 +1249,19 @@
             <!-- Pane Full-stack 2 -->
             <div class="dev-rec-pane" id="dev-pane-fullstack2">
               <div class="dev-rec-header">
-                <h3>🔧 Vitoria Rodrigues <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-secondary);">— Dev Full-stack (PHP, HTML, JS)</span></h3>
+                <h3 style="display:flex;align-items:center;gap:8px;"><i data-lucide="wrench" style="width:1.2rem;height:1.2rem;"></i> Vitoria Rodrigues <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-secondary);">— Dev Full-stack (PHP, HTML, JS)</span></h3>
                 <span class="badge badge-dark">IDE: NetBeans</span>
               </div>
               <div class="dev-rec-cards-grid">
                 <div class="card border-top-primary">
-                  <h4>🛠️ Solução Recomendada</h4>
+                  <h4 style="display:flex;align-items:center;gap:6px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" style="flex-shrink:0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                    Solução Recomendada
+                  </h4>
                   <p style="margin-top: 8px;"><strong>Antigravity IDE</strong> (VS Code Fork) — Opção C: Migração Leve.</p>
                 </div>
                 <div class="card border-top-tertiary">
-                  <h4>💡 Custo Estimado</h4>
+                  <h4 style="display:flex;align-items:center;gap:6px;"><i data-lucide="lightbulb" style="width:1rem;height:1rem;"></i> Custo Estimado</h4>
                   <p style="margin-top: 8px;"><strong>$19.99 / mês</strong> (Plano Google AI Pro).</p>
                 </div>
               </div>
@@ -1244,7 +1296,7 @@
             <div class="chart-bar-wrapper">
               <div class="chart-bar" data-percentage="20%"></div>
             </div>
-            <span class="chart-value">$20 / mês</span>
+            <span class="chart-value">$20/mês</span>
           </div>
 
           <!-- Row 2: Sênior -->
@@ -1253,7 +1305,7 @@
             <div class="chart-bar-wrapper">
               <div class="chart-bar" data-percentage="20%"></div>
             </div>
-            <span class="chart-value">$20 / mês</span>
+            <span class="chart-value">$20/mês</span>
           </div>
 
           <!-- Row 3: Front -->
@@ -1262,7 +1314,7 @@
             <div class="chart-bar-wrapper">
               <div class="chart-bar" data-percentage="20%"></div>
             </div>
-            <span class="chart-value">$20 / mês</span>
+            <span class="chart-value">$19.99/mês</span>
           </div>
 
           <!-- Row 4: Back -->
@@ -1271,7 +1323,7 @@
             <div class="chart-bar-wrapper">
               <div class="chart-bar" data-percentage="20%"></div>
             </div>
-            <span class="chart-value">$20 / mês</span>
+            <span class="chart-value">$20/mês</span>
           </div>
 
           <!-- Row 5: FS 1 -->
@@ -1280,7 +1332,7 @@
             <div class="chart-bar-wrapper">
               <div class="chart-bar" data-percentage="20%"></div>
             </div>
-            <span class="chart-value">$20 / mês</span>
+            <span class="chart-value">$19.99/mês</span>
           </div>
 
           <!-- Row 6: FS 2 -->
@@ -1289,7 +1341,7 @@
             <div class="chart-bar-wrapper">
               <div class="chart-bar" data-percentage="20%"></div>
             </div>
-            <span class="chart-value">$20 / mês</span>
+            <span class="chart-value">$19.99/mês</span>
           </div>
         </div>
 
@@ -1297,13 +1349,14 @@
         <div class="grid-3" style="margin-top: 32px; width: 100%;">
           <div class="card border-top-primary" style="padding: 16px; text-align: center;">
             <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase;">INVESTIMENTO TOTAL</span>
-            <h3 style="font-size: 2.2rem; color: var(--color-primary); margin-top: 4px;">$120<span style="font-size: 1rem; font-weight: 500;">/mês</span></h3>
+            <h3 style="font-size: 2.2rem; color: var(--color-primary); margin-top: 4px;">~$120.00<span style="font-size: 1rem; font-weight: 500;">/mês</span></h3>
+            <span style="font-size: 0.85rem; color: var(--text-secondary);">(~R$ 600,00/mês)</span>
           </div>
-          <div class="card" style="padding: 16px; font-size: 0.8rem; display: flex; align-items: center;">
-            💡 Alex Carreira inicia no plano Claude Pro ($20/mês), podendo fazer upgrade para o plano Max 5x ($100/mês) caso o consumo justifique.
+          <div class="card" style="padding: 16px; font-size: 0.8rem; display: flex; align-items: center; gap:8px;">
+            <i data-lucide="lightbulb" style="width:1rem;height:1rem;flex-shrink:0;color:var(--color-secondary);"></i> Alex Carreira inicia no plano Claude Pro ($20/mês), podendo fazer upgrade para o plano Max 5x ($100/mês) caso o consumo justifique.
           </div>
-          <div class="card" style="padding: 16px; font-size: 0.8rem; display: flex; align-items: center;">
-            ✅ Com a adoção do Antigravity (Google AI Pro) para os full-stacks e Claude Pro para o sênior, o orçamento total reduziu para $120/mês.
+          <div class="card" style="padding: 16px; font-size: 0.8rem; display: flex; align-items: center; gap:8px;">
+            <i data-lucide="check-circle" style="width:1rem;height:1rem;flex-shrink:0;color:var(--color-primary);"></i> Com a adoção do Antigravity (Google AI Pro $19.99) para os full-stacks e front-end, o orçamento total é ~$119.97/mês.
           </div>
         </div>
       </div>
@@ -1321,10 +1374,10 @@
         <span class="badge badge-secondary">Checklist</span>
       </div>
       
-      <div class="slide-body" style="justify-content: flex-start;">
+      <div class="slide-body" style="justify-content: flex-start; flex-direction: column; overflow-y: hidden; align-items: stretch; padding: 0 16px;">
         <p style="margin-bottom: 16px; text-align: center;">Marque as tarefas para planejar a transição da equipe de desenvolvimento em tempo real.</p>
         
-        <div class="checklist-container" style="max-height: 360px; overflow-y: auto; padding: 4px;">
+        <div class="checklist-container">
           <!-- Fase 1 -->
           <div class="checklist-group">
             <h4 class="checklist-group-title">Fase 1 — Setup e Ferramental (Semanas 1 e 2)</h4>
@@ -1400,13 +1453,13 @@
           
           <div class="conclusion-points">
             <div class="conclusion-point">
-              🤖 "LLMs são o cérebro cognitivo. O Harness é o corpo e o sistema motor que permite agir."
+              <i data-lucide="bot" style="width:1.2rem;height:1.2rem;margin-right:8px;vertical-align:middle;opacity:0.8;"></i>"LLMs são o cérebro cognitivo. O Harness é o corpo e o sistema motor que permite agir."
             </div>
             <div class="conclusion-point">
-              📐 "O papel do desenvolvedor se transforma: de mero escritor de linhas para arquiteto de agentes autônomos."
+              <i data-lucide="drafting-compass" style="width:1.2rem;height:1.2rem;margin-right:8px;vertical-align:middle;opacity:0.8;"></i>"O papel do desenvolvedor se transforma: de mero escritor de linhas para arquiteto de agentes autônomos."
             </div>
             <div class="conclusion-point">
-              🚀 "Iniciar o aprendizado e adoção hoje custa infinitamente menos do que tentar recuperar o atraso amanhã."
+              <i data-lucide="rocket" style="width:1.2rem;height:1.2rem;margin-right:8px;vertical-align:middle;opacity:0.8;"></i>"Iniciar o aprendizado e adoção hoje custa infinitamente menos do que tentar recuperar o atraso amanhã."
             </div>
           </div>
         </div>
@@ -1440,5 +1493,15 @@
   <script src="js/navigation.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/components.js"></script>
+  <script>
+    // Initialize Lucide icons after all content is ready
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.lucide) lucide.createIcons();
+    });
+    // Also re-render after any dynamic content changes
+    window.addEventListener('load', function() {
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
 </body>
 </html>
