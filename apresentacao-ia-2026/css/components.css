@@ -4,21 +4,21 @@
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(16px, 3vw, 36px);
+  gap: 28px;
   width: 100%;
 }
 
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(12px, 2vw, 24px);
+  gap: 20px;
   width: 100%;
 }
 
 .grid-agenda {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: min(20px, 2.2vh);
+  gap: 16px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;

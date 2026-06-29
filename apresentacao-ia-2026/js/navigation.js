@@ -29,9 +29,43 @@ document.addEventListener('DOMContentLoaded', () => {
       this.createProgressDots();
       this.createDrawerList();
       this.setupEventListeners();
+      this.setupResizeHandler();
       
       // Navigate to first slide
       this.goToSlide(0);
+    },
+
+    setupResizeHandler() {
+      const updateScale = () => {
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+        
+        // Base dimensions of our presentation slide (16:10 aspect ratio)
+        const baseWidth = 1280;
+        const baseHeight = 800;
+        
+        // Calculate scale factor (with 5% side padding, 10% vertical padding)
+        const scaleX = (viewportWidth * 0.94) / baseWidth;
+        const scaleY = (viewportHeight * 0.86) / baseHeight;
+        
+        // Fit slide inside the viewport
+        let scale = Math.min(scaleX, scaleY);
+        
+        // Don't scale above 1.25 to avoid blurriness on massive screens
+        if (scale > 1.25) scale = 1.25;
+        
+        // Don't scale below 0.35 on tiny devices
+        if (scale < 0.35) scale = 0.35;
+        
+        // Set CSS Custom Property
+        document.documentElement.style.setProperty('--slide-scale', scale);
+      };
+      
+      // Initial scale calculation
+      updateScale();
+      
+      // Scale on resize
+      window.addEventListener('resize', updateScale);
     },
 
     createProgressDots() {

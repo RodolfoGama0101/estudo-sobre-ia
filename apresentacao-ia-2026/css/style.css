@@ -99,43 +99,20 @@ body::after {
   z-index: 1;
 }
 
-/* Individual Slide Structure - Supporting 16:9 and 16:10 */
+/* Individual Slide Structure - Supporting 16:9 and 16:10 with fixed 1280x800 canvas scaled to fit viewport */
 .slide {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  
-  /* Sizing that supports both 16:9 and 16:10 screens gracefully */
-  width: 94vw;
-  height: 58.75vw; /* 16:10 aspect ratio based on width */
-  max-width: 1400px;
-  max-height: 875px; /* 16:10 aspect ratio max (1400/1.6 = 875) */
-  
-  /* Scale height down for wider viewports to maintain ratio */
-  @media (min-aspect-ratio: 16/10) {
-    height: 84vh;
-    width: 134.4vh; /* 16:10 aspect ratio based on height */
-  }
-  
-  /* Responsive viewport adjustment for smaller screens/mobile */
-  @media (max-width: 1024px) {
-    width: 100vw;
-    height: 100vh;
-    max-width: none;
-    max-height: none;
-    padding: 24px;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-  }
+  top: 50%;
+  left: 50%;
+  width: 1280px;
+  height: 800px;
+  transform: translate(-50%, -50%) scale(var(--slide-scale, 1));
+  transform-origin: center center;
   
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: clamp(24px, 4vh, 48px) clamp(32px, 5vw, 72px);
+  padding: 40px 60px 48px 60px;
   background-color: var(--bg-slide-deck);
   border: 1px solid var(--border-subtle);
   border-radius: 24px;
@@ -157,15 +134,21 @@ body::after {
   pointer-events: auto;
   visibility: visible;
   z-index: 10;
-  transform: translateX(0);
+  transform: translate(-50%, -50%) scale(var(--slide-scale, 1));
 }
 
 .slide.prev-slide {
-  transform: translateX(-120%) scale(0.95);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: translate(-170%, -50%) scale(calc(var(--slide-scale, 1) * 0.95));
 }
 
 .slide.next-slide {
-  transform: translateX(120%) scale(0.95);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: translate(70%, -50%) scale(calc(var(--slide-scale, 1) * 0.95));
 }
 
 /* Slide Themes */
@@ -189,27 +172,27 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-size: 3.2rem;
   letter-spacing: -0.03em;
-  font-weight: 800;
+  font-weight: 900;
   background: linear-gradient(135deg, #FFFFFF 30%, #94A3B8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 h2 {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: 2.1rem;
   letter-spacing: -0.02em;
   font-weight: 800;
 }
 
 h3 {
-  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+  font-size: 1.35rem;
   letter-spacing: -0.01em;
 }
 
 p {
-  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  font-size: 0.95rem;
   line-height: 1.6;
   color: var(--text-secondary);
 }
