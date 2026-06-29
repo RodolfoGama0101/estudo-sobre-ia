@@ -17,8 +17,8 @@
 
 .grid-agenda {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: min(20px, 2.2vh);
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -196,7 +196,7 @@ tr:hover td {
 .timeline-inner {
   display: flex;
   position: relative;
-  min-width: 1200px;
+  min-width: min(100%, 950px);
   padding-bottom: 20px;
 }
 

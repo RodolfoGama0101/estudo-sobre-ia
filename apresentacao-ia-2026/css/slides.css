@@ -99,12 +99,31 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 30px 20px;
+  padding: min(20px, 2.2vh) min(16px, 1.8vw);
+  height: 100%;
 }
 
 .agenda-icon {
-  font-size: 2.5rem;
-  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: min(8px, 1vh);
+}
+
+.agenda-icon-svg {
+  width: min(2rem, 4vh) !important;
+  height: min(2rem, 4vh) !important;
+}
+
+.agenda-link-card h3 {
+  font-size: min(1.15rem, 2.3vh);
+  margin-bottom: min(4px, 0.5vh);
+}
+
+.agenda-link-card p {
+  font-size: min(0.72rem, 1.6vh);
+  margin-top: min(4px, 0.5vh) !important;
+  line-height: 1.3;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -370,3 +389,282 @@
 .slide.active .conclusion-point:nth-child(1) { transition-delay: 0.4s; }
 .slide.active .conclusion-point:nth-child(2) { transition-delay: 1.0s; }
 .slide.active .conclusion-point:nth-child(3) { transition-delay: 1.6s; }
+
+/* -------------------------------------------------------------------------- */
+/* NEW SLIDES — Seção Projetos com IA */
+
+.project-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.project-details ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-details li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.tech-tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.narrative-card {
+  border: 1px dashed var(--color-primary);
+  border-radius: 12px;
+  padding: 16px;
+  background: rgba(74, 124, 89, 0.04);
+  font-style: italic;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--text-main);
+  margin-top: 8px;
+}
+
+.slide.theme-dark .narrative-card,
+.slide.theme-navy .narrative-card {
+  border-color: var(--color-secondary);
+  background: rgba(196, 124, 58, 0.04);
+}
+
+.github-badge-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  background-color: var(--bg-dark);
+  color: var(--text-invert);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  align-self: flex-start;
+  transition: background-color 0.2s;
+}
+
+.github-badge-link:hover {
+  background-color: var(--color-primary);
+}
+
+/* Phone Mockup (Bookself) */
+.phone-mockup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: min(480px, 60vh);
+}
+
+.phone-mockup-frame {
+  width: min(230px, 30vh);
+  height: min(460px, 60vh);
+  border: 12px solid #2d2621;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  background: #1a1008;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.phone-mockup-frame:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.phone-mockup-screen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.phone-mockup-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: min(18px, 2.5vh);
+  background: #2d2621;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  z-index: 10;
+}
+
+/* Desktop Mockup (YT-Downloader) */
+.desktop-mockup-wrapper {
+  width: 100%;
+  max-width: 440px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  border: 2px solid rgba(44, 42, 38, 0.15);
+  background: #0d0d0d;
+}
+
+.slide.theme-dark .desktop-mockup-wrapper,
+.slide.theme-navy .desktop-mockup-wrapper {
+  border-color: rgba(245, 240, 232, 0.1);
+}
+
+.desktop-mockup-header {
+  height: 28px;
+  background: #202020;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.desktop-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.desktop-dot.red { background: #ff5f56; }
+.desktop-dot.yellow { background: #ffbd2e; }
+.desktop-dot.green { background: #27c93f; }
+
+.desktop-mockup-content {
+  padding: 16px;
+  background: #121212;
+  color: #e0e0e0;
+  font-family: monospace;
+  font-size: 0.75rem;
+  text-align: left;
+  line-height: 1.4;
+  height: min(240px, 35vh);
+  overflow-y: auto;
+}
+
+/* Architecture Mockup (ADVO Hexagonal) */
+.arch-diagram-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: min(8px, 1.2vh);
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: min(16px, 2vh);
+  border-radius: 12px;
+  max-width: 420px;
+}
+
+.arch-layer {
+  padding: min(10px, 1.5vh);
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.arch-layer.adapters-in { background: #2e5b82; }
+.arch-layer.ports-in { background: #3c709c; }
+.arch-layer.domain { background: var(--color-primary); }
+.arch-layer.ports-out { background: #688a53; }
+.arch-layer.adapters-out { background: #506e3d; }
+
+.arch-subtext {
+  font-size: 0.65rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+/* WIP Slide styling */
+.progress-bar-wip {
+  width: 100%;
+  height: 12px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.progress-bar-wip-fill {
+  height: 100%;
+  background: var(--color-primary);
+  width: 60%;
+  animation: wip-pulse 2s infinite ease-in-out;
+}
+
+@keyframes wip-pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Correção de contraste nos cards em slides com fundos escuros */
+.slide.theme-dark .card,
+.slide.theme-navy .card,
+.slide.theme-dark .card h1,
+.slide.theme-dark .card h2,
+.slide.theme-dark .card h3,
+.slide.theme-dark .card h4,
+.slide.theme-navy .card h1,
+.slide.theme-navy .card h2,
+.slide.theme-navy .card h3,
+.slide.theme-navy .card h4 {
+  color: var(--text-main);
+}
+
+/* Layout do grid de projetos na capa da seção */
+.projects-capa-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+@media (max-width: 768px) {
+  .projects-capa-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-capa-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .phone-mockup-wrapper {
+    max-height: 360px;
+  }
+  .phone-mockup-frame {
+    width: 170px;
+    height: 340px;
+  }
+}
+

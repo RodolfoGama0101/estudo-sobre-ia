@@ -114,6 +114,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Click first node by default on load
+  if (timelineNodes.length > 0) {
+    timelineNodes[0].click();
+  }
+
   // 3. SLIDE 4 — Flip Cards (Conceitos LLM)
   const flipCards = document.querySelectorAll('.flip-card-container');
   flipCards.forEach(card => {
@@ -370,8 +375,8 @@ document.addEventListener('DOMContentLoaded', () => {
     card.addEventListener('click', () => {
       const devId = card.getAttribute('data-dev-id');
       if (window.slideshow) {
-        // Go to Slide 15 (Index 14)
-        window.slideshow.goToSlide(14);
+        // Go to Slide 20 (Index 19)
+        window.slideshow.goToSlide(19);
         
         // Wait shortly for slide transition to finish, then activate dev tab
         setTimeout(() => {
@@ -404,8 +409,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('slideChanged', (e) => {
     const slideIndex = e.detail.index;
     
-    // Slide 16 is index 15 (0-indexed)
-    if (slideIndex === 15) {
+    // Slide 21 is index 20 (0-indexed)
+    if (slideIndex === 20) {
       const chartBars = document.querySelectorAll('.chart-bar');
       chartBars.forEach(bar => {
         const targetWidth = bar.getAttribute('data-percentage');
