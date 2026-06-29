@@ -8,9 +8,9 @@ Este repositório contém uma pesquisa aprofundada e uma apresentação interati
 
 O projeto é dividido entre documentos de pesquisa e a aplicação web da apresentação:
 
-*   **[plano_de_pesquisa_ia_2026.md](file:///c:/Users/rodolfo/Desktop/Estudo%20sobre%20IA/plano_de_pesquisa_ia_2026.md)**: Planejamento inicial contendo os objetivos, escopo, metodologia e perguntas-chave a serem respondidas pela pesquisa.
-*   **[resultados_pesquisa_ia_2026.md](file:///c:/Users/rodolfo/Desktop/Estudo%20sobre%20IA/resultados_pesquisa_ia_2026.md)**: Compilado detalhado das informações coletadas, estruturado em seções que vão dos fundamentos da IA e história até a análise técnica profunda e o processo de adoção.
-*   **[plano_apresentacao_html.md](file:///c:/Users/rodolfo/Desktop/Estudo%20sobre%20IA/plano_apresentacao_html.md)**: Documento de design que define o fluxo de slides, a paleta de cores (Design System) e a estrutura interativa da apresentação em HTML.
+*   **[plano_de_pesquisa_ia_2026.md](file:///c:/Users/rodolfo/Desktop/Estudo%20sobre%20IA/pesquisa/plano_de_pesquisa_ia_2026.md)**: Planejamento inicial contendo os objetivos, escopo, metodologia e perguntas-chave a serem respondidas pela pesquisa.
+*   **[resultados_pesquisa_ia_2026.md](file:///c:/Users/rodolfo/Desktop/Estudo%20sobre%20IA/pesquisa/resultados_pesquisa_ia_2026.md)**: Compilado detalhado das informações coletadas, estruturado em seções que vão dos fundamentos da IA e história até a análise técnica profunda e o processo de adoção.
+*   **[plano_apresentacao_html.md](file:///c:/Users/rodolfo/Desktop/Estudo%20sobre%20IA/pesquisa/plano_apresentacao_html.md)**: Documento de design que define o fluxo de slides, a paleta de cores (Design System) e a estrutura interativa da apresentação em HTML.
 *   **[apresentacao-ia-2026/](file:///c:/Users/rodolfo/Desktop/Estudo%20sobre%20IA/apresentacao-ia-2026)**: Diretório contendo a aplicação web interativa da apresentação.
     *   `index.html`: Estrutura principal dos slides.
     *   `css/`: Design system, layouts específicos dos slides e estilos dos componentes (cards, badges, botões, tabelas).

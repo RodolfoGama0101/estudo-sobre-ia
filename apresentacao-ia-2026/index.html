@@ -959,7 +959,7 @@
       <div class="slide-header">
         <div class="slide-header-left">
           <span class="slide-category">Projetos com IA</span>
-          <h2>Bookself App — Rastreamento de Leitura para Casais</h2>
+          <h2>Bookself App — Plataforma de Leitura Compartilhada</h2>
         </div>
         <span class="badge badge-primary">Mobile App</span>
       </div>
@@ -976,18 +976,18 @@
             </div>
             
             <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 8px;">
-              Um aplicativo mobile premium desenvolvido para ajudar casais a gerenciarem suas leituras, catalogarem livros favoritos e explorarem o progresso bíblico juntos com sincronização em tempo real.
+              Um aplicativo mobile premium desenvolvido para gerenciar leituras, catalogar bibliotecas pessoais e sincronizar o progresso de estudos e metas em tempo real entre parceiros de leitura.
             </p>
             
             <ul>
-              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>Sincronização Bidirecional:</strong> Leitura e status de estante sincronizados em nuvem via Cloud Firestore.</span></li>
-              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>Histórico e Métricas:</strong> Feed de atividades do casal e gráficos dinâmicos de metas mensais e anuais.</span></li>
-              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>Progresso Bíblico Compartilhado:</strong> Grade de capítulos marcados individualmente por cada membro do casal.</span></li>
+              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>Sincronização em Nuvem:</strong> Status de leitura e catalogação de estantes sincronizados via Cloud Firestore.</span></li>
+              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>Métricas de Progresso Conjunto:</strong> Feed de atividades integradas e gráficos analíticos de metas literárias (mensais e anuais).</span></li>
+              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>Leitura Colaborativa &amp; Estudos Coletivos:</strong> Grade interativa de progresso compartilhado em estudos ou leituras conjuntas (como cronogramas bíblicos ou acadêmicos).</span></li>
             </ul>
 
             <div class="narrative-card">
               <strong>Como a IA ajudou no desenvolvimento:</strong><br>
-              Refinação de layouts complexos e mapeamento semântico de schemas do Firestore. Espaço aberto para narrar sua experiência pessoal.
+              Refinação de layouts complexos e mapeamento semântico de schemas do Firestore.
             </div>
 
             <a href="https://github.com/RodolfoGama0101/bookself-app.git" target="_blank" class="github-badge-link">
@@ -1000,16 +1000,16 @@
             <div class="phone-mockup-wrapper">
               <div class="phone-mockup-frame">
                 <div class="phone-mockup-notch"></div>
-                <img id="bookself-screen-img" src="../Bookself-App%20Photos/Screenshot_20260619_095704.jpg" alt="Bookself App Screen" class="phone-mockup-screen">
+                <img id="bookself-screen-img" src="images/bookself/bookself_home_dark.jpg" alt="Bookself App Screen" class="phone-mockup-screen">
               </div>
             </div>
             
             <!-- Controles de Tela -->
             <div style="display: flex; gap: 8px;">
-              <button class="modal-open-btn" style="background-color: var(--color-primary);" onclick="document.getElementById('bookself-screen-img').src='../Bookself-App%20Photos/Screenshot_20260619_095704.jpg'">Home (Escuro)</button>
-              <button class="modal-open-btn" style="background-color: var(--color-primary);" onclick="document.getElementById('bookself-screen-img').src='../Bookself-App%20Photos/Screenshot_20260619_095710.jpg'">Estante</button>
-              <button class="modal-open-btn" style="background-color: var(--color-primary);" onclick="document.getElementById('bookself-screen-img').src='../Bookself-App%20Photos/Screenshot_20260619_095732.jpg'">Bíblia</button>
-              <button class="modal-open-btn" style="background-color: var(--color-primary);" onclick="document.getElementById('bookself-screen-img').src='../Bookself-App%20Photos/Screenshot_20260619_095746.jpg'">Home (Claro)</button>
+              <button class="modal-open-btn" style="background-color: var(--color-primary);" onclick="document.getElementById('bookself-screen-img').src='images/bookself/bookself_home_dark.jpg'">Home (Escuro)</button>
+              <button class="modal-open-btn" style="background-color: var(--color-primary);" onclick="document.getElementById('bookself-screen-img').src='images/bookself/bookself_shelf.jpg'">Estante</button>
+              <button class="modal-open-btn" style="background-color: var(--color-primary);" onclick="document.getElementById('bookself-screen-img').src='images/bookself/bookself_bible.jpg'">Bíblia</button>
+              <button class="modal-open-btn" style="background-color: var(--color-primary);" onclick="document.getElementById('bookself-screen-img').src='images/bookself/bookself_home_light.jpg'">Home (Claro)</button>
             </div>
           </div>
         </div>
@@ -1044,14 +1044,14 @@
             </p>
             
             <ul>
-              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>Feedback Visual em Tempo Real:</strong> Exibe thumbnail, título, canal e duração antes de baixar.</span></li>
-              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>Bitrate &amp; Qualidade:</strong> Suporta resoluções até 1080p e conversão de MP3 em até 320 kbps.</span></li>
-              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>Resiliência Local:</strong> Função abortar que limpa instantaneamente os arquivos temporários criados.</span></li>
+              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>Portabilidade Total (.exe):</strong> Distribuído como executável portátil (.exe) compilado via PyInstaller, rodando sem dependências externas no Windows.</span></li>
+              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>Downloads &amp; FFmpeg Integrado:</strong> Extração de áudio/vídeo de alta performance com conversão automática via binários autogeridos do FFmpeg.</span></li>
+              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>Interface Gráfica Moderna:</strong> Interface desktop intuitiva feita com CustomTkinter, trazendo barra de progresso, logs detalhados e controle de qualidade.</span></li>
             </ul>
 
             <div class="narrative-card">
               <strong>Como a IA ajudou no desenvolvimento:</strong><br>
-              Aceleração da escrita da GUI em CustomTkinter e empacotamento do executável portable. Espaço aberto para narrar sua experiência pessoal.
+              Aceleração da escrita da GUI em CustomTkinter e empacotamento do executável portable.
             </div>
 
             <a href="https://github.com/RodolfoGama0101/yt-downloader.git" target="_blank" class="github-badge-link">
@@ -1059,30 +1059,17 @@
             </a>
           </div>
           
-          <!-- Coluna Direita: Mockup de Window Terminal/GUI -->
+          <!-- Coluna Direita: Mockup do App Desktop -->
           <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;">
-            <div class="desktop-mockup-wrapper">
+            <div class="desktop-mockup-wrapper" style="max-width: 520px;">
               <div class="desktop-mockup-header">
                 <div class="desktop-dot red"></div>
                 <div class="desktop-dot yellow"></div>
                 <div class="desktop-dot green"></div>
-                <span style="font-size: 0.7rem; color: #888; margin-left: 8px; font-family: monospace;">yt_downloader.py</span>
+                <span style="font-size: 0.7rem; color: #888; margin-left: 8px; font-family: monospace;">YT Downloader v1.0.0 (Portable)</span>
               </div>
-              <div class="desktop-mockup-content">
-                <span style="color: #68aa53;">$ python yt_downloader.py</span><br>
-                <span style="color: #888;">[info] Starting YT Downloader Desktop UI v1.0.0...</span><br>
-                <span style="color: #888;">[info] Loading engine dependencies (yt-dlp)... OK</span><br>
-                <span style="color: #888;">[info] Binding FFmpeg binary context (automanaged)... OK</span><br>
-                <span style="color: #4285F4;">Input URL:</span> https://www.youtube.com/watch?v=dQw4w9WgXcQ<br>
-                <span style="color: #FBBC05;">Fetching video metadata...</span><br>
-                <span style="color: #e0e0e0;">&gt; Title: Never Gonna Give You Up</span><br>
-                <span style="color: #e0e0e0;">&gt; Channel: Rick Astley</span><br>
-                <span style="color: #e0e0e0;">&gt; Duration: 03:32 | Format: MP4 (1080p)</span><br>
-                <span style="color: #34A853;">[download] 🚀 Speed: 8.4 MB/s | Size: ~45.2 MB</span><br>
-                <span style="color: #34A853;">[download] 100% of 45.20MiB in 00:00:05</span><br>
-                <span style="color: #68aa53;">[ffmpeg] Merging video and audio formats...</span><br>
-                <span style="color: #68aa53;">✔ Download completed successfully! [📂 Open Folder]</span><br>
-                <span style="color: #888;">$ ▒</span>
+              <div style="background: #1e1e1e; padding: 0; line-height: 0; overflow: hidden; display: flex; justify-content: center; align-items: center;">
+                <img src="images/yt-downloader/yt_downloader_app.png" alt="YT Downloader Screenshot" style="width: 100%; height: auto; display: block; border-radius: 0 0 10px 10px;">
               </div>
             </div>
           </div>
@@ -1097,7 +1084,7 @@
       <div class="slide-header">
         <div class="slide-header-left">
           <span class="slide-category">Projetos com IA</span>
-          <h2>ADVO — Sistema de Gestão Jurídica Enterprise</h2>
+          <h2>ADVO — Sistema de Gestão Jurídica &amp; Landing Page</h2>
         </div>
         <span class="badge badge-primary">Web Platform</span>
       </div>
@@ -1115,53 +1102,44 @@
             </div>
             
             <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 8px;">
-              Plataforma robusta e escalável projetada sob a Arquitetura Hexagonal para simplificar rotinas em escritórios advocatícios, controle financeiro e prazos judiciais.
+              Uma solução completa de gestão para escritórios de advocacia que simplifica o controle de processos, fluxo financeiro e prazos judiciais, com uma Landing Page institucional moderna.
             </p>
             
             <ul>
-              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>Ports &amp; Adapters:</strong> Domínio puro isolado de dependências e frameworks externos.</span></li>
-              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>Atualizações Otimistas:</strong> Zustand gerencia o Kanban de processos e sincroniza silenciosamente em background.</span></li>
-              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>RBAC &amp; JWT Seguro:</strong> Controle estrito de sessões por cargo ou permissão institucional.</span></li>
+              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>Gestão Operacional Completa:</strong> Painel Kanban para controle de prazos processuais, fluxo de caixa empresarial e agenda integrada de atendimentos.</span></li>
+              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>Arquitetura Modular (Hexagonal):</strong> Backend robusto e extensível estruturado em Ports &amp; Adapters, mantendo as regras de negócio puras e isoladas.</span></li>
+              <li><i data-lucide="check-circle" style="width:1.1rem;height:1.1rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i> <span><strong>Landing Page &amp; Interface Moderna:</strong> Interface responsiva de alto desempenho construída com React 19, Zustand (estado otimista) e Tailwind CSS via Vite 8.</span></li>
             </ul>
 
             <div class="narrative-card">
               <strong>Como a IA ajudou no desenvolvimento:</strong><br>
-              Validação das portas do domínio, criação de migrations Flyway e escrita de testes unitários mockados. Espaço aberto para narrar sua experiência pessoal.
+              Validação das portas do domínio, criação de migrations Flyway e escrita de testes unitários mockados.
             </div>
 
-            <a href="https://github.com/RodolfoGama0101/advo.git" target="_blank" class="github-badge-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github" style="width:1.1rem;height:1.1rem;margin-right:6px;"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg> Ver no GitHub
-            </a>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <a href="https://github.com/RodolfoGama0101/advo.git" target="_blank" class="github-badge-link" style="margin: 0;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github" style="width:1.1rem;height:1.1rem;margin-right:6px;"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg> Ver no GitHub
+              </a>
+              <a href="https://advo-landing-page.vercel.app/" target="_blank" class="github-badge-link" style="margin: 0; background-color: var(--color-secondary);">
+                <i data-lucide="external-link" style="width:1.1rem;height:1.1rem;margin-right:6px;flex-shrink:0;"></i> Acessar Landing Page
+              </a>
+            </div>
           </div>
           
-          <!-- Coluna Direita: Mockup do Diagrama da Arquitetura Hexagonal -->
-          <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-            <div class="arch-diagram-wrapper">
-              <h4 style="font-size: 0.85rem; color: var(--color-primary); text-align: center; margin-bottom: 8px; font-family: var(--font-headings);">ADVO - Fluxo da Arquitetura Hexagonal</h4>
-              
-              <div class="arch-layer adapters-in">
-                Inbound Adapters
-                <span class="arch-subtext">REST API Controllers (Spring Boot)</span>
+          <!-- Coluna Direita: Mockup do Navegador (Landing Page / Dashboard) -->
+          <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;">
+            <div class="desktop-mockup-wrapper" style="max-width: 520px;">
+              <div class="desktop-mockup-header" style="background: #202020; height: 32px; display: flex; align-items: center; justify-content: flex-start; padding: 0 12px; gap: 6px;">
+                <div class="desktop-dot red"></div>
+                <div class="desktop-dot yellow"></div>
+                <div class="desktop-dot green"></div>
+                <div style="background: #121212; color: #888; font-size: 0.65rem; padding: 3px 12px; border-radius: 4px; margin-left: 12px; font-family: monospace; display: flex; align-items: center; gap: 6px; flex-grow: 1; max-width: 320px; border: 1px solid rgba(255,255,255,0.05);">
+                  <i data-lucide="lock" style="width: 0.75rem; height: 0.75rem; color: #68aa53; flex-shrink: 0;"></i>
+                  <span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">https://advo-landing-page.vercel.app</span>
+                </div>
               </div>
-              <div style="text-align: center; font-size: 0.8rem; color: #888; margin: 2px 0;">↓ Calls</div>
-              <div class="arch-layer ports-in">
-                Inbound Ports
-                <span class="arch-subtext">Use Cases &amp; Services Boundaries</span>
-              </div>
-              <div style="text-align: center; font-size: 0.8rem; color: #888; margin: 2px 0;">↓ Executes</div>
-              <div class="arch-layer domain">
-                Domain Core (Pure Business Logic)
-                <span class="arch-subtext">Entities &amp; Domain Services (Java 25)</span>
-              </div>
-              <div style="text-align: center; font-size: 0.8rem; color: #888; margin: 2px 0;">↓ Uses</div>
-              <div class="arch-layer ports-out">
-                Outbound Ports
-                <span class="arch-subtext">Repository Ports &amp; Storage Boundaries</span>
-              </div>
-              <div style="text-align: center; font-size: 0.8rem; color: #888; margin: 2px 0;">↓ Implemented by</div>
-              <div class="arch-layer adapters-out">
-                Outbound Adapters
-                <span class="arch-subtext">Spring Data JPA / MariaDB / Local Storage</span>
+              <div style="background: #121212; padding: 0; line-height: 0; overflow: hidden; display: flex; justify-content: center; align-items: center;">
+                <img src="images/advo/advo_app.png" alt="ADVO System Interface" style="width: 100%; height: auto; display: block; border-radius: 0 0 10px 10px;">
               </div>
             </div>
           </div>
