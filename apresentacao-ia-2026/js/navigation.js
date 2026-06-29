@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.createDrawerList();
       this.setupEventListeners();
       this.setupResizeHandler();
+      this.initTheme();
       
       // Navigate to first slide
       this.goToSlide(0);
@@ -66,6 +67,63 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Scale on resize
       window.addEventListener('resize', updateScale);
+    },
+
+    initTheme() {
+      const themeBtn = document.querySelector('.theme-toggle-btn');
+      const savedTheme = localStorage.getItem('presentation-theme');
+      
+      const setTheme = (theme) => {
+        if (theme === 'light') {
+          document.body.classList.add('light-theme');
+          localStorage.setItem('presentation-theme', 'light');
+          if (themeBtn) {
+            themeBtn.innerHTML = '<i data-lucide="moon"></i>';
+            if (window.lucide) lucide.createIcons();
+          }
+        } else {
+          document.body.classList.remove('light-theme');
+          localStorage.setItem('presentation-theme', 'dark');
+          if (themeBtn) {
+            themeBtn.innerHTML = '<i data-lucide="sun"></i>';
+            if (window.lucide) lucide.createIcons();
+          }
+        }
+      };
+
+      // Set initial theme
+      if (savedTheme === 'light') {
+        setTheme('light');
+      } else {
+        setTheme('dark');
+      }
+
+      if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+          const isLight = document.body.classList.contains('light-theme');
+          setTheme(isLight ? 'dark' : 'light');
+        });
+      }
+    },
+
+    toggleTheme() {
+      const isLight = document.body.classList.contains('light-theme');
+      const themeBtn = document.querySelector('.theme-toggle-btn');
+      if (isLight) {
+        document.body.classList.remove('light-theme');
+        localStorage.setItem('presentation-theme', 'dark');
+        if (themeBtn) {
+          themeBtn.innerHTML = '<i data-lucide="sun"></i>';
+          if (window.lucide) lucide.createIcons();
+        }
+      } else {
+        document.body.classList.add('light-theme');
+        localStorage.setItem('presentation-theme', 'light');
+        if (themeBtn) {
+          themeBtn.innerHTML = '<i data-lucide="moon"></i>';
+          if (window.lucide) lucide.createIcons();
+        }
+      }
     },
 
     createProgressDots() {
@@ -157,6 +215,11 @@ document.addEventListener('DOMContentLoaded', () => {
           case 'f':
           case 'F':
             this.toggleFullscreen();
+            break;
+          case 't':
+          case 'T':
+            e.preventDefault();
+            this.toggleTheme();
             break;
           case 'Escape':
             this.closeDrawer();

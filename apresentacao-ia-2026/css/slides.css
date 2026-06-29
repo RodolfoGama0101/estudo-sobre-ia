@@ -56,15 +56,62 @@
   align-items: center;
   height: 100%;
   text-align: center;
-  gap: 24px;
+  gap: 20px;
   position: relative;
+  width: 100%;
+}
+
+.capa-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  transform: translate(-50%, -50%);
+  background-image: 
+    radial-gradient(rgba(6, 182, 212, 0.12) 1px, transparent 1px),
+    radial-gradient(rgba(99, 102, 241, 0.08) 1.5px, transparent 1.5px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
+  opacity: 0.85;
+  z-index: 0;
+  pointer-events: none;
+  animation: pulse-grid 8s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-grid {
+  0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.9; }
+}
+
+.capa-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+.capa-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.16) 0%, rgba(6, 182, 212, 0.06) 50%, transparent 70%);
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  filter: blur(20px);
 }
 
 .capa-subtitle {
-  font-size: 1.6rem;
+  font-size: 1.55rem;
   font-family: var(--font-headings);
   font-weight: 500;
   color: var(--text-secondary);
+  opacity: 0.9;
+  letter-spacing: -0.01em;
 }
 
 .capa-arrow-pulse {
@@ -506,22 +553,22 @@
 .phone-mockup-frame {
   width: 210px;
   height: 440px;
-  border: 8px solid #1E293B;
-  border-radius: 32px;
+  border: 4px solid #1E293B; /* S24+ has very slim symmetrical borders */
+  border-radius: 28px; /* S24+ flat chassis corners */
   overflow: hidden;
   box-shadow: 0 25px 50px rgba(0,0,0,0.6), 0 0 30px rgba(99, 102, 241, 0.05);
   background: #000000;
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 4px;
+  padding: 0; /* Screen goes edge to edge */
   transition: all 0.3s ease;
 }
 
 .phone-mockup-frame:hover {
   transform: scale(1.02);
   box-shadow: 0 30px 60px rgba(0,0,0,0.7), 0 0 40px rgba(6, 182, 212, 0.1);
-  border-color: #334155;
+  border-color: #475569;
 }
 
 .phone-mockup-screen {
@@ -533,35 +580,18 @@
 }
 
 .phone-mockup-notch {
+  /* Styled as Samsung S24+ Centered Punch-Hole Camera */
   position: absolute;
-  top: 12px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 70px;
-  height: 18px;
-  background: #1E293B;
-  border-radius: 0 0 12px 12px;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.phone-mockup-notch::before {
-  content: "";
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 50%;
-  background: #0F172A;
-  margin-right: 14px;
-}
-
-.phone-mockup-notch::after {
-  content: "";
-  width: 25px;
-  height: 3px;
-  border-radius: 20px;
-  background: #334155;
+  z-index: 10;
+  display: block;
 }
 
 /* Desktop Mockup (YT-Downloader & ADVO) */
