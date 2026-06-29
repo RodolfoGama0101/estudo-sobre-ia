@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.setupEventListeners();
       this.setupResizeHandler();
       this.initTheme();
+      this.initCustomCursor();
       
       // Navigate to first slide
       this.goToSlide(0);
@@ -123,6 +124,74 @@ document.addEventListener('DOMContentLoaded', () => {
           themeBtn.innerHTML = '<i data-lucide="moon"></i>';
           if (window.lucide) lucide.createIcons();
         }
+      }
+    },
+
+    initCustomCursor() {
+      // Check if device supports hover (desktop)
+      if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+      
+      const dot = document.createElement('div');
+      const ring = document.createElement('div');
+      dot.className = 'custom-cursor-dot';
+      ring.className = 'custom-cursor-ring';
+      document.body.appendChild(dot);
+      document.body.appendChild(ring);
+      
+      let mouseX = 0;
+      let mouseY = 0;
+      let ringX = 0;
+      let ringY = 0;
+      
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        
+        // Move center dot immediately
+        dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+      });
+      
+      // Interpolated trailing loop using requestAnimationFrame
+      const tick = () => {
+        ringX += (mouseX - ringX) * 0.18;
+        ringY += (mouseY - ringY) * 0.18;
+        
+        ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
+        requestAnimationFrame(tick);
+      };
+      tick();
+      
+      // Dynamically attach hover listeners to clickables, support dynamic elements too
+      const addHoverListeners = () => {
+        const interactives = document.querySelectorAll(
+          'button, a, .progress-dot, .nav-drawer-item, .arrow-nav-btn, .quick-menu-btn, .theme-toggle-btn, .card, .pricing-card, .org-card, .flip-card-container, .agenda-link-card, [onclick]'
+        );
+        interactives.forEach(el => {
+          // Prevent double-attaching
+          if (el.dataset.hasCursorHover) return;
+          el.dataset.hasCursorHover = 'true';
+          
+          el.addEventListener('mouseenter', () => {
+            dot.classList.add('custom-cursor-active');
+            ring.classList.add('custom-cursor-active');
+          });
+          el.addEventListener('mouseleave', () => {
+            dot.classList.remove('custom-cursor-active');
+            ring.classList.remove('custom-cursor-active');
+          });
+        });
+      };
+      
+      // Initial attach
+      addHoverListeners();
+      
+      // Re-attach listeners periodically or on events where UI changes (like slides change or menu open)
+      document.addEventListener('slideChanged', addHoverListeners);
+      const menuTrigger = document.querySelector('.quick-menu-btn');
+      if (menuTrigger) {
+        menuTrigger.addEventListener('click', () => {
+          setTimeout(addHoverListeners, 100); // slight delay to wait for drawer render
+        });
       }
     },
 
