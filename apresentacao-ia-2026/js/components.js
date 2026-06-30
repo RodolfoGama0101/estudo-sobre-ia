@@ -79,20 +79,23 @@ document.addEventListener('DOMContentLoaded', () => {
       if (progressLine && timelineInner) {
         const innerRect = timelineInner.getBoundingClientRect();
         const nodePoint = node.querySelector('.timeline-node-point');
+        // Account for CSS transform scale applied to the slide canvas
+        const scaleX = timelineInner.offsetWidth > 0 ? innerRect.width / timelineInner.offsetWidth : 1;
         if (idx === timelineNodes.length - 1) {
           progressLine.style.width = '100%';
           progressLine.style.background = 'linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary) 80%, var(--color-secondary) 100%)';
         } else if (nodePoint) {
           const pointRect = nodePoint.getBoundingClientRect();
-          const centerX = pointRect.left + pointRect.width / 2;
-          const progressWidth = centerX - innerRect.left;
-          progressLine.style.width = progressWidth + 'px';
-          progressLine.style.background = 'var(--color-primary)';
+          const centerXScaled = pointRect.left + pointRect.width / 2;
+          const progressWidthScaled = centerXScaled - innerRect.left;
+          // Divide by scale to get unscaled CSS pixels
+          progressLine.style.width = (progressWidthScaled / scaleX) + 'px';
+          progressLine.style.background = 'linear-gradient(90deg, var(--color-primary), var(--color-secondary))';
         } else {
           // Fallback to percentage calculation
           const percent = (idx / (timelineNodes.length - 1)) * 100;
           progressLine.style.width = percent + '%';
-          progressLine.style.background = 'var(--color-primary)';
+          progressLine.style.background = 'linear-gradient(90deg, var(--color-primary), var(--color-secondary))';
         }
       }
       
@@ -455,3 +458,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+/* ---- Bookself Screen Switcher ---- */
+function switchBookself(btn, src) {
+  // Update image
+  const img = document.getElementById('bookself-screen-img');
+  if (img) {
+    img.style.opacity = '0';
+    img.style.transition = 'opacity 0.2s ease';
+    setTimeout(() => {
+      img.src = src;
+      img.onload = () => {
+        img.style.opacity = '1';
+      };
+    }, 150);
+  }
+  // Update active state on buttons
+  const siblings = btn.closest('div').querySelectorAll('.screen-switcher-btn');
+  siblings.forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}

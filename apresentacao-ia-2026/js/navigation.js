@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.setupResizeHandler();
       this.initTheme();
       this.initCustomCursor();
+      this.initCursorColor();
       
       // Navigate to first slide
       this.goToSlide(0);
@@ -127,6 +128,45 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     },
 
+    initCursorColor() {
+      const cursorBtn = document.querySelector('.cursor-toggle-btn');
+      const savedCursor = localStorage.getItem('presentation-cursor-color');
+      
+      const setCursorColor = (color) => {
+        if (color === 'red') {
+          document.body.classList.add('red-cursor');
+          localStorage.setItem('presentation-cursor-color', 'red');
+        } else {
+          document.body.classList.remove('red-cursor');
+          localStorage.setItem('presentation-cursor-color', 'default');
+        }
+      };
+
+      if (savedCursor === 'red') {
+        setCursorColor('red');
+      } else {
+        setCursorColor('default');
+      }
+
+      if (cursorBtn) {
+        cursorBtn.addEventListener('click', () => {
+          const isRed = document.body.classList.contains('red-cursor');
+          setCursorColor(isRed ? 'default' : 'red');
+        });
+      }
+    },
+
+    toggleCursorColor() {
+      const isRed = document.body.classList.contains('red-cursor');
+      if (isRed) {
+        document.body.classList.remove('red-cursor');
+        localStorage.setItem('presentation-cursor-color', 'default');
+      } else {
+        document.body.classList.add('red-cursor');
+        localStorage.setItem('presentation-cursor-color', 'red');
+      }
+    },
+
     initCustomCursor() {
       // Check if device supports hover (desktop)
       if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
@@ -151,10 +191,10 @@ document.addEventListener('DOMContentLoaded', () => {
         dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
       });
       
-      // Interpolated trailing loop using requestAnimationFrame
+      // Interpolated trailing loop using requestAnimationFrame (snappy tracking)
       const tick = () => {
-        ringX += (mouseX - ringX) * 0.18;
-        ringY += (mouseY - ringY) * 0.18;
+        ringX += (mouseX - ringX) * 0.36;
+        ringY += (mouseY - ringY) * 0.36;
         
         ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
         requestAnimationFrame(tick);
@@ -289,6 +329,11 @@ document.addEventListener('DOMContentLoaded', () => {
           case 'T':
             e.preventDefault();
             this.toggleTheme();
+            break;
+          case 'c':
+          case 'C':
+            e.preventDefault();
+            this.toggleCursorColor();
             break;
           case 'Escape':
             this.closeDrawer();

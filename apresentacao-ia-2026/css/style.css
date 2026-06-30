@@ -198,7 +198,8 @@ p {
   color: var(--text-secondary);
 }
 
-.slide.theme-dark p, .slide.theme-navy p {
+body:not(.light-theme) .slide.theme-dark p,
+body:not(.light-theme) .slide.theme-navy p {
   color: #94A3B8;
 }
 
@@ -553,6 +554,47 @@ p {
   height: 1.2rem;
 }
 
+/* Cursor Toggle Button */
+.cursor-toggle-btn {
+  position: absolute;
+  top: 24px;
+  right: clamp(128px, 12vw, 160px);
+  z-index: 110;
+  background: rgba(14, 19, 31, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s var(--transition-ease);
+  color: var(--text-secondary);
+}
+
+.cursor-toggle-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: #EF4444;
+  color: #EF4444;
+  transform: scale(1.05);
+}
+
+.cursor-toggle-btn svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/* Red cursor state button highlight */
+body.red-cursor .cursor-toggle-btn {
+  background: rgba(239, 68, 68, 0.15) !important;
+  border-color: #EF4444 !important;
+  color: #EF4444 !important;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.3) !important;
+}
+
 @media (max-width: 1024px) {
   .theme-toggle-btn {
     top: 12px;
@@ -563,6 +605,17 @@ p {
   .theme-toggle-btn svg {
     width: 1rem;
     height: 1rem;
+  }
+  
+  .cursor-toggle-btn {
+    top: 12px;
+    right: 100px;
+    width: 36px;
+    height: 36px;
+  }
+  .cursor-toggle-btn svg {
+    width: 0.95rem;
+    height: 0.95rem;
   }
 }
 
@@ -614,6 +667,19 @@ body.light-theme .theme-toggle-btn:hover {
   background: rgba(99, 102, 241, 0.05);
   border-color: var(--color-primary);
   color: var(--text-main);
+}
+
+body.light-theme .cursor-toggle-btn {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  color: var(--text-secondary);
+}
+
+body.light-theme .cursor-toggle-btn:hover {
+  background: rgba(239, 68, 68, 0.05);
+  border-color: #EF4444;
+  color: #EF4444;
 }
 
 body.light-theme .arrow-nav-btn {
@@ -724,11 +790,11 @@ body.light-theme .modal-content::-webkit-scrollbar-thumb:hover {
 }
 
 /* Custom cursor styling - disabled by default, enabled on hover-supporting devices */
-body, button, a, .progress-dot, .nav-drawer-item, .arrow-nav-btn, .quick-menu-btn, .theme-toggle-btn {
-  cursor: none !important; /* Hide default cursor on desktop */
-}
-
 @media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important; /* Hide default system cursor globally on desktop */
+  }
+
   .custom-cursor-dot {
     position: fixed;
     top: -4px;
@@ -739,7 +805,8 @@ body, button, a, .progress-dot, .nav-drawer-item, .arrow-nav-btn, .quick-menu-bt
     border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
-    transition: transform 0.05s ease-out, background-color 0.3s ease;
+    /* transition ONLY background-color, NOT transform, to prevent translation lag */
+    transition: background-color 0.3s ease;
   }
   
   .custom-cursor-ring {
@@ -769,12 +836,24 @@ body, button, a, .progress-dot, .nav-drawer-item, .arrow-nav-btn, .quick-menu-bt
     border-color: var(--color-tertiary);
     background-color: rgba(16, 185, 129, 0.08); /* soft green glow */
   }
+
+  /* Red cursor override theme */
+  body.red-cursor .custom-cursor-dot {
+    background-color: #EF4444;
+  }
+  body.red-cursor .custom-cursor-ring {
+    border-color: rgba(239, 68, 68, 0.4);
+  }
+  body.red-cursor .custom-cursor-dot.custom-cursor-active {
+    background-color: #DC2626;
+  }
+  body.red-cursor .custom-cursor-ring.custom-cursor-active {
+    border-color: #DC2626;
+    background-color: rgba(239, 68, 68, 0.08);
+  }
 }
 
 @media (hover: none) {
-  body, button, a, .progress-dot, .nav-drawer-item, .arrow-nav-btn, .quick-menu-btn, .theme-toggle-btn {
-    cursor: auto !important;
-  }
   .custom-cursor-dot, .custom-cursor-ring {
     display: none !important;
   }
