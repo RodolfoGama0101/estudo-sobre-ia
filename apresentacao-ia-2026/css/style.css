@@ -749,43 +749,49 @@ body.light-theme .modal-close {
   background: rgba(0, 0, 0, 0.05);
 }
 
-/* Custom Scrollbar for Nav Drawer & Scrollable Slide Body */
+/* Custom Scrollbar for Nav Drawer & Scrollable Slide Body & Checklist Container */
 .nav-drawer::-webkit-scrollbar,
 .slide-body::-webkit-scrollbar,
-.modal-content::-webkit-scrollbar {
+.modal-content::-webkit-scrollbar,
+.checklist-container::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 .nav-drawer::-webkit-scrollbar-track,
 .slide-body::-webkit-scrollbar-track,
-.modal-content::-webkit-scrollbar-track {
+.modal-content::-webkit-scrollbar-track,
+.checklist-container::-webkit-scrollbar-track {
   background: transparent;
 }
 
 .nav-drawer::-webkit-scrollbar-thumb,
 .slide-body::-webkit-scrollbar-thumb,
-.modal-content::-webkit-scrollbar-thumb {
+.modal-content::-webkit-scrollbar-thumb,
+.checklist-container::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.12);
   border-radius: 4px;
 }
 
 .nav-drawer::-webkit-scrollbar-thumb:hover,
 .slide-body::-webkit-scrollbar-thumb:hover,
-.modal-content::-webkit-scrollbar-thumb:hover {
+.modal-content::-webkit-scrollbar-thumb:hover,
+.checklist-container::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.25);
 }
 
 /* Light Theme Scrollbars */
 body.light-theme .nav-drawer::-webkit-scrollbar-thumb,
 body.light-theme .slide-body::-webkit-scrollbar-thumb,
-body.light-theme .modal-content::-webkit-scrollbar-thumb {
+body.light-theme .modal-content::-webkit-scrollbar-thumb,
+body.light-theme .checklist-container::-webkit-scrollbar-thumb {
   background: rgba(15, 23, 42, 0.15);
 }
 
 body.light-theme .nav-drawer::-webkit-scrollbar-thumb:hover,
 body.light-theme .slide-body::-webkit-scrollbar-thumb:hover,
-body.light-theme .modal-content::-webkit-scrollbar-thumb:hover {
+body.light-theme .modal-content::-webkit-scrollbar-thumb:hover,
+body.light-theme .checklist-container::-webkit-scrollbar-thumb:hover {
   background: rgba(15, 23, 42, 0.3);
 }
 

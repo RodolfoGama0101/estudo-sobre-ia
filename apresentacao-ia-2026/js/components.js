@@ -332,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
       
-      highlightBtn.textContent = !isHighlighted ? "Limpar Destaques" : "Destacar Melhor";
+      highlightBtn.textContent = !isHighlighted ? "Limpar Destaques" : "Destacar Pontos Fortes";
     });
   }
 
@@ -341,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const priceValues = {
     codex: { monthly: ["$20", "$100", "$200"], annual: ["$20", "$100", "$200"] },
     claude: { monthly: ["$20", "$100", "$200"], annual: ["$17", "$100", "$200"] },
-    antigravity: { monthly: ["$19.99", "$79.99", "$199.99"], annual: ["$16.66", "$66.66", "$166.66"] }
+    antigravity: { monthly: ["$20", "$100", "$200"], annual: ["$17", "$83", "$166"] }
   };
 
   if (billingToggle) {

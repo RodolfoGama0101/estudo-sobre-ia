@@ -809,20 +809,6 @@ body.light-theme .pricing-card[data-provider="antigravity"] {
   box-shadow: 0 8px 32px rgba(99, 102, 241, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-.pricing-card[data-provider="antigravity"]::after {
-  content: "RECOMENDADO";
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-  color: #fff;
-  font-size: 0.6rem;
-  font-weight: 800;
-  padding: 3px 8px;
-  border-radius: 10px;
-  letter-spacing: 0.05em;
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
-}
 
 .pricing-card-title {
   font-family: var(--font-headings);
@@ -994,4 +980,225 @@ body.light-theme .chart-bar-wrapper {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide 12 — Tabela Comparativa Responsiva Sem Rolagem */
+#slide-12 .table-responsive {
+  overflow-x: hidden !important;
+  max-height: none !important;
+}
+
+#slide-12 table {
+  table-layout: fixed !important;
+  width: 100% !important;
+}
+
+#slide-12 th, #slide-12 td {
+  word-wrap: break-word !important;
+  white-space: normal !important;
+  padding: 12px 8px !important;
+  font-size: 0.82rem !important;
+}
+
+@media (max-width: 1024px) {
+  #slide-12 th, #slide-12 td {
+    padding: 8px 4px !important;
+    font-size: 0.72rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #slide-12 th, #slide-12 td {
+    padding: 6px 3px !important;
+    font-size: 0.64rem !important;
+  }
+}
+
+/* Slide 21 — Grade de Assentos de Licenciamento (Seat Grid) */
+.seats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .seats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+.seat-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 20px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.seat-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.15);
+}
+
+.seat-card-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(99, 102, 241, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+}
+
+.seat-card-name {
+  font-family: var(--font-headings);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.seat-card-role {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.seat-card-tool {
+  background-color: rgba(15, 23, 42, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+body.light-theme .seat-card-tool {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.seat-card-price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.seat-card-price span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* Slide 21 — Resumo de Assentos (Summary Strip) */
+.seats-summary-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0;
+  width: 100%;
+  margin-top: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 16px 24px;
+  flex-wrap: wrap;
+}
+
+.seats-summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1 1 0;
+  min-width: 80px;
+  padding: 4px 8px;
+  text-align: center;
+}
+
+.seats-summary-item.seats-summary-total .seats-summary-value {
+  color: var(--color-primary);
+  font-size: 1.6rem;
+}
+
+.seats-summary-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+.seats-summary-value {
+  font-family: var(--font-headings);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.seats-summary-value small {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.seats-summary-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border-subtle);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .seats-summary-strip {
+    gap: 12px;
+    padding: 12px;
+  }
+  .seats-summary-divider {
+    display: none;
+  }
+  .seats-summary-item {
+    min-width: 70px;
+  }
+}
+
+/* OS Badge Chips — Slides 9, 10, 11 */
+.os-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.os-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.os-chip svg {
+  flex-shrink: 0;
 }
